@@ -66,3 +66,15 @@ body{
 .lifvqk{
   font-size: 30px;
 }
+
+.cardStyle{
+  height: 320px;
+  background-color: #282c34;
+}
+
+.cardStyle img{
+  height: 200px !important;
+  width: 100%!important;
+  object-fit: cover;
+}
+

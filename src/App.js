@@ -33,7 +33,7 @@ class Chatbot extends React.Component {
 
     return (
       <ChatBot
-        style={{ width: '80%', height: '80vh', top:'10vh', left:'10vw'}}
+        style={{ width: '90%', height: '80vh', top:'10vh', left:'5vw'}}
         steps={steps}
         handleEnd={() => console.log('Chat ended')}
       />
@@ -114,17 +114,23 @@ class CardListStep extends React.Component {
     };
 
     const headingStyle = {
-      marginTop: '0',
+      marginTop: '10px',
     };
 
     const priceStyle = {
-      fontWeight: 'bold',
+      fontWeight: '',
     };
 
     const linkStyle = {
       display: 'block',
       textAlign: 'center',
-      marginTop: '10px',
+      backgroundColor:'yellow',
+      color:'red',
+      
+      height:'30px',
+    
+      justifyContent: 'center!important',
+      
     };
 
     const imageStyle = {
@@ -132,6 +138,7 @@ class CardListStep extends React.Component {
       height: '100px',
       margin: '0 auto',
       display: 'block',
+      
     };
 
     const viewSimilarStyle = {
@@ -139,9 +146,14 @@ class CardListStep extends React.Component {
       color: '#fff',
       border: 'none',
       padding: '5px 10px',
-      marginTop: '10px',
+      
+      marginTop: '100px',
       borderRadius: '5px',
       cursor: 'pointer',
+      height:'100px',
+      display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
     };
 
     return (
@@ -151,7 +163,7 @@ class CardListStep extends React.Component {
             <h2>{category}</h2>
             <div style={{ display: 'flex', flexWrap: 'wrap' }}>
               {apiData[category].topResults.slice(0, 5).map((item, i) => (
-                <div style={cardStyle} key={i}>
+                <div style={cardStyle} className='cardStyle' key={i}>
                   <img
                     src="https://rukminim2.flixcart.com/image/832/832/xif0q/kurta/i/l/h/l-nairakurta-glomee-original-imagnur6jvrzt6gz.jpeg?q=70"
                     alt="Placeholder"
@@ -191,3 +203,4 @@ class CardListStep extends React.Component {
 
 
 export default Chatbot;
+
