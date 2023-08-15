@@ -96,68 +96,69 @@ class CardListStep extends React.Component {
         value: 'Card list displayed successfully!',
         trigger: 'userInput',
       });
-    }, 500); 
+    }, 5000); // 5000 milliseconds (5 seconds)
   }
+
   render() {
-    const { previousStep, triggerNextStep } = this.props;
+    const { previousStep } = this.props;
     const apiData = previousStep.value;
 
     const cardStyle = {
-      border: '1px solid #e0e0e0',
-      borderRadius: '10px',
-      padding: '20px',
+      border: '1px solid #ccc',
+      padding: '10px',
       margin: '10px',
-      width: '250px',
+      width: '200px',
+      borderRadius: '10px',
+      backgroundColor: '#f9f9f9',
       boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-      backgroundColor: '#fff',
     };
 
     const headingStyle = {
       marginTop: '0',
-      fontSize: '18px',
-      marginBottom: '10px',
     };
 
     const priceStyle = {
       fontWeight: 'bold',
-      fontSize: '14px',
-      marginBottom: '10px',
     };
 
     const linkStyle = {
       display: 'block',
       textAlign: 'center',
-      fontSize: '14px',
-      color: '#007bff',
-      textDecoration: 'none',
+      marginTop: '10px',
+    };
+
+    const imageStyle = {
+      width: '100px',
+      height: '100px',
+      margin: '0 auto',
+      display: 'block',
     };
 
     const viewSimilarStyle = {
       backgroundColor: '#007bff',
       color: '#fff',
       border: 'none',
-      borderRadius: '5px',
-      padding: '8px 12px',
+      padding: '5px 10px',
       marginTop: '10px',
+      borderRadius: '5px',
       cursor: 'pointer',
-      display: 'inline-block',
-      textDecoration: 'none',
-    };
-
-    const categoryContainerStyle = {
-      marginBottom: '20px',
     };
 
     return (
       <div>
         {Object.keys(apiData).map((category, index) => (
-          <div style={categoryContainerStyle} key={index}>
+          <div key={index}>
             <h2>{category}</h2>
             <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-              {apiData[category].topResults.slice(0, 4).map((item, i) => (
+              {apiData[category].topResults.slice(0, 5).map((item, i) => (
                 <div style={cardStyle} key={i}>
+                  <img
+                    src="https://rukminim2.flixcart.com/image/832/832/xif0q/kurta/i/l/h/l-nairakurta-glomee-original-imagnur6jvrzt6gz.jpeg?q=70"
+                    alt="Placeholder"
+                    style={imageStyle}
+                  />
                   <h3 style={headingStyle}>{item.name}</h3>
-                  <p style={priceStyle}>Price: Rs{item.current_price}</p>
+                  <p style={priceStyle}>Price: ${item.current_price}</p>
                   <a
                     style={linkStyle}
                     href={item.link}
@@ -168,21 +169,22 @@ class CardListStep extends React.Component {
                   </a>
                 </div>
               ))}
+              <a
+                href={apiData[category].searchLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={viewSimilarStyle}
+              >
+                View Similar
+              </a>
             </div>
-            <a
-              href={apiData[category].searchLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={viewSimilarStyle}
-            >
-              View Similar Products
-            </a>
           </div>
         ))}
       </div>
     );
   }
 }
+
 
 
 
