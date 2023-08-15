@@ -5,6 +5,8 @@
   height: 100vh;
 }
 
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -38,4 +40,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.hDUXUW {
+  position: fixed !important;
+  bottom: 0;
+  width: 100%;
+}
+
+body{
+  background-color: #f1f3f6;
+}
+
+.fBGGBn{
+  height: 90% !important;
 }

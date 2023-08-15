@@ -33,7 +33,7 @@ class Chatbot extends React.Component {
 
     return (
       <ChatBot
-        style={{ width: '100%' }}
+        style={{ width: '80%', height: '80vh', top:'10vh', left:'10vw'}}
         steps={steps}
         handleEnd={() => console.log('Chat ended')}
       />
