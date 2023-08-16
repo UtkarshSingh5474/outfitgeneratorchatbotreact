@@ -1,16 +1,32 @@
 import React from 'react';
-import { getCombinedOutfitText } from '../api';
+import { getCombinedOutfitTextWithSearchResultsApiRequest } from '../api';
 
 class ApiResponseStep extends React.Component {
     state = {
       message: 'Generating the best outfit for you! Please wait',
     };
+    //make an array of messages
+    
   
-    componentDidMount() {
-      const { previousStep, triggerNextStep } = this.props;
-  
-      getCombinedOutfitText(previousStep.value)
+    async componentDidMount() {
+      const { previousStep, triggerNextStep, addMessageToHistory, messages,userInfo } = this.props;
+
+      const userInput={
+        role: 'user',
+        content: previousStep.value,
+      }
+
+      console.log("messages:",messages);
+      console.log("userInput:",userInput);
+      await addMessageToHistory(userInput.role, userInput.content);
+      console.log("messagesApiResponseStep:",messages);
+
+
+      // Get the combined outfit with search results text from the API
+      getCombinedOutfitTextWithSearchResultsApiRequest(messages,userInfo)
         .then((response) => {
+
+          console.log("response:",response);
           const outfitOverview = response.outfitOverview;
           let formattedMessage = outfitOverview.replace(/\n/g, '<br />');
           formattedMessage = formattedMessage.replace(
@@ -19,6 +35,12 @@ class ApiResponseStep extends React.Component {
           );
           const message = formattedMessage;
   
+          const modelResponse = {
+            role: 'assistant',
+            content: message,
+          };
+      
+          addMessageToHistory(modelResponse.role, modelResponse.content);
   
           this.setState({ message }, () => {
             triggerNextStep({
@@ -40,6 +62,7 @@ class ApiResponseStep extends React.Component {
     }
   
     render() {
+
       return (
         <div>
           <div dangerouslySetInnerHTML={{ __html: this.state.message }} />
@@ -48,4 +71,4 @@ class ApiResponseStep extends React.Component {
     }
   }
 
-  export default ApiResponseStep;
+  export default ApiResponseStep; 

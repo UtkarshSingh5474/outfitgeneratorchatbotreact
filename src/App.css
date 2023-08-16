@@ -4,7 +4,9 @@
 #root {
   height: 100vh;
 }
-
+ .rsc-ts-bubble{
+  padding-bottom: 40px;
+ }
 
 
 .App-logo {
@@ -78,3 +80,6 @@ body{
   object-fit: cover;
 }
 
+.rsc-ts{
+  padding-bottom: 60px;
+}

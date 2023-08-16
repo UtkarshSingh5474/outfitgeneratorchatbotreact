@@ -1,10 +1,60 @@
 // apiFunctions.js
 
+//var apiUrlBase = "http://127.0.0.1:8000/"
 var apiUrlBase = "https://outfitgeneratorapi-i3odb6kjxq-em.a.run.app/"
 
 // apiFunctions.js
 
-export async function getCombinedOutfitText(input) {
+export async function getOverviewText(input) {
+  const apiUrl = apiUrlBase+`outfit_text?input=${encodeURIComponent(input)}`;
+
+  try {
+    const response = await fetch(apiUrl);
+    if (!response.ok) {
+      throw new Error(`Network response was not ok: ${response.status}`);
+    }
+    const data = await response.json();
+
+    return data;
+  } catch (error) {
+    console.error("Fetch error:", error);
+  }
+}
+
+export async function getOverviewTextFlipkartResults(input) {
+
+  const apiUrl = apiUrlBase+`items_flipkart_results?overviewText=${encodeURIComponent(input)}`;
+
+  try {
+    const response = await fetch(apiUrl);
+    if (!response.ok) {
+      throw new Error(`Network response was not ok: ${response.status}`);
+    }
+    const data = await response.json();
+
+    return data;
+  } catch (error) {
+    console.error("Fetch error:", error);
+  }
+}
+
+export async function getCombinedOutfitTextWithSearchResultsApiRequest( messages, userInfo){
+  
+  var outfitOverview= await getOverviewText(JSON.stringify(messages));
+  var clothingItems = {};
+
+  if (outfitOverview.includes("1.")) {
+
+
+    clothingItems= await getOverviewTextFlipkartResults(`{'userInfo':${userInfo},'outfitOverview':${outfitOverview}`);
+  } 
+  
+
+  return {'outfitOverview':outfitOverview, 'clothingItems':clothingItems};
+}
+
+
+export async function getCombinedOutfitTextApiRequest(input) {
   const apiUrl = apiUrlBase+`combined_outfit_text?input=${encodeURIComponent(input)}`;
 
   try {
@@ -14,7 +64,6 @@ export async function getCombinedOutfitText(input) {
     //   throw new Error(`Network response was not ok: ${response.status}`);
     // }
     // const data = await response.json();
-    // console.log(data);
     const data = {
         "outfitOverview": "For your visit to your brother's for Rakshabandhan, I would recommend a traditional and festive outfit that is comfortable and stylish. Based on your past orders, I suggest the following outfit:\n\n1. Anarkali Suit: A beautiful Anarkali suit in a vibrant color like deep red or royal blue would be a perfect choice. The suit should have intricate embroidery or embellishments on the bodice and a flowy flare. It should be made of comfortable and breathable fabric like silk or georgette.\n\n2. Statement Earrings: Pair the Anarkali suit with a stunning pair of statement earrings. Opt for long chandelier earrings or jhumkas with intricate designs. Choose a color that complements your outfit, such as gold or silver.\n\n3. Embellished Sandals: Complete your outfit with a pair of embellished sandals. Look for sandals with embroidered details or embellishments like stones or pearls. Choose a color that matches or complements your Anarkali suit, such as gold or silver.\n\n4. Ethnic Clutch: Carry a stylish ethnic clutch to keep your essentials close by. Look for a clutch with traditional designs or embroidery that matches the color scheme of your outfit. A gold or silver clutch would go well with the overall look.\n\n5. Mehndi: Enhance your traditional look by applying beautiful mehndi designs on your hands. Opt for intricate patterns and motifs that symbolize the festival of Rakshabandhan.\n\nRemember to style your hair in a neat bun or braid and apply a subtle makeup look with a focus on the eyes. Enjoy your time with your brother and celebrate the bond of love and protection on Rakshabandhan!",
         "clothingItems": {
