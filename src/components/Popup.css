@@ -1,0 +1,33 @@
+main2{
+    text-align: center;
+}
+.main2{
+    background-color: rgba(39, 145, 216,0.710);
+    
+    width: 100%;
+    position:absolute;
+    top: 10vh;
+    z-index: 1000000;
+
+}
+.popup{
+    height: 500px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 25%;
+    right: 20%;
+    z-index: 100;
+    background-color: #C0C0C0;
+
+}
+.popup-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px 0 15px;
+    border-bottom: 2px solid black;
+}
+
+button{
+    color: white;
+}
