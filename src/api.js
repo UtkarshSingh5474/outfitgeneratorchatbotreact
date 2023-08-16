@@ -16,185 +16,185 @@ export async function getCombinedOutfitText(input) {
     // const data = await response.json();
     // console.log(data);
     const data = {
-      "outfitOverview": "For Rakshabandhan, a traditional and festive occasion, I would suggest a stylish and elegant outfit for you. Considering your previous purchases, I will create an outfit that complements your style and body type.\n\nOutfit details:\n1. Anarkali Suit: A beautiful Anarkali suit in a vibrant color like royal blue or emerald green would be perfect for Rakshabandhan. The suit should have intricate embroidery and embellishments, giving it a rich and luxurious look.\n\n2. Matching Dupatta: Pair the Anarkali suit with a matching dupatta that complements the color and design of the suit. The dupatta can have embellishments or a border to enhance the overall look.\n\n3. Statement Earrings: Choose a pair of statement earrings in gold or silver to add a touch of glamour to your outfit. Opt for designs that have intricate detailing or unique shapes to make them stand out.\n\n4. Ethnic Footwear: Complete your look with a pair of embellished juttis or mojris in a color that matches your Anarkali suit. Look for footwear that is comfortable and stylish at the same time.\n\n5. Clutch Bag: Carry a small clutch bag that matches your outfit. It can have embroidery or embellishments to enhance the overall look and keep your essentials handy.\n\n6. Fresh Makeup: Opt for a fresh and dewy makeup look with a focus on your eyes. Use earthy tones for eyeshadow and opt for a bold lip color that complements your outfit.\n\nRemember to style your hair in a way that enhances your overall look and complements the traditional attire.\n\nEnjoy your Rakshabandhan celebration with your brother in style!",
-      "clothingItems": {
+        "outfitOverview": "For your visit to your brother's for Rakshabandhan, I would recommend a traditional and festive outfit that is comfortable and stylish. Based on your past orders, I suggest the following outfit:\n\n1. Anarkali Suit: A beautiful Anarkali suit in a vibrant color like deep red or royal blue would be a perfect choice. The suit should have intricate embroidery or embellishments on the bodice and a flowy flare. It should be made of comfortable and breathable fabric like silk or georgette.\n\n2. Statement Earrings: Pair the Anarkali suit with a stunning pair of statement earrings. Opt for long chandelier earrings or jhumkas with intricate designs. Choose a color that complements your outfit, such as gold or silver.\n\n3. Embellished Sandals: Complete your outfit with a pair of embellished sandals. Look for sandals with embroidered details or embellishments like stones or pearls. Choose a color that matches or complements your Anarkali suit, such as gold or silver.\n\n4. Ethnic Clutch: Carry a stylish ethnic clutch to keep your essentials close by. Look for a clutch with traditional designs or embroidery that matches the color scheme of your outfit. A gold or silver clutch would go well with the overall look.\n\n5. Mehndi: Enhance your traditional look by applying beautiful mehndi designs on your hands. Opt for intricate patterns and motifs that symbolize the festival of Rakshabandhan.\n\nRemember to style your hair in a neat bun or braid and apply a subtle makeup look with a focus on the eyes. Enjoy your time with your brother and celebrate the bond of love and protection on Rakshabandhan!",
+        "clothingItems": {
           "Anarkali Suit": {
-              "searchLink": "https://www.flipkart.com/search?marketplace=FLIPKART&q=Buy%20royal%20blue%20Anarkali%20suit%20for%20women",
-              "topResults": [
-                  {
-                      "name": "Unstitched Polycotton Salwar Suit Material Embroidered",
-                      "current_price": 299,
-                      "link": "https://www.flipkart.com/gurhal-polycotton-embroidered-salwar-suit-material/p/itm4d1c17662b9d4",
-                      "thumbnail": []
-                  },
-                  {
-                      "name": "Unstitched Polycotton Salwar Suit Material Embroidered",
-                      "current_price": 299,
-                      "link": "https://www.flipkart.com/gurhal-polycotton-embroidered-salwar-suit-material/p/itm3fea2463810b1",
-                      "thumbnail": []
-                  },
-                  {
-                      "name": "Semi Stitched Net/Lace Gown/Anarkali Kurta &amp; Bottom Mat...",
-                      "current_price": 339,
-                      "link": "https://www.flipkart.com/webric-net-lace-embroidered-gown-anarkali-kurta-bottom-material/p/itm0b88c21aa95a7",
-                      "thumbnail": []
-                  },
-                  {
-                      "name": "Semi Stitched Net/Lace Kurta Fabric Embroidered",
-                      "current_price": 412,
-                      "link": "https://www.flipkart.com/color-bucket-net-lace-embroidered-kurta-fabric/p/itm4fd72904f40cd",
-                      "thumbnail": []
-                  },
-                  {
-                      "name": "Unstitched Organza Salwar Suit Material Embroidered",
-                      "current_price": 595,
-                      "link": "https://www.flipkart.com/suvidhi-synthetics-organza-embroidered-salwar-suit-material/p/itme53e937f84576",
-                      "thumbnail": []
-                  }
-              ]
-          },
-          "Matching Dupatta": {
-              "searchLink": "https://www.flipkart.com/search?marketplace=FLIPKART&q=Shop%20emerald%20green%20dupatta%20with%20embellishments",
-              "topResults": [
-                  {
-                      "name": "Net Embroidered Gold Women Dupatta",
-                      "current_price": 188,
-                      "link": "https://www.flipkart.com/vihani-net-embroidered-women-dupatta/p/itmc72af83053af5",
-                      "thumbnail": []
-                  },
-                  {
-                      "name": "Chiffon Solid Multicolor Women Dupatta",
-                      "current_price": 549,
-                      "link": "https://www.flipkart.com/hella-fashions-chiffon-solid-women-dupatta/p/itm50a962435d718",
-                      "thumbnail": []
-                  },
-                  {
-                      "name": "Organza Printed Blue Women Dupatta",
-                      "current_price": 298,
-                      "link": "https://www.flipkart.com/v-shop-organza-printed-women-dupatta/p/itm66734eeef6554",
-                      "thumbnail": []
-                  },
-                  {
-                      "name": "Organza Printed Light Green, Light Blue Women Dupatta",
-                      "current_price": 664,
-                      "link": "https://www.flipkart.com/v-shop-organza-printed-women-dupatta/p/itmf7ff8eec6f2d5",
-                      "thumbnail": []
-                  },
-                  {
-                      "name": "Poly Chanderi Embellished, Floral Print, Graphic Print,...",
-                      "current_price": 625,
-                      "link": "https://www.flipkart.com/faserz-poly-chanderi-embellished-floral-print-graphic-printed-women-dupatta/p/itmc71e336ec3aaa",
-                      "thumbnail": []
-                  }
-              ]
+            "searchLink": "https://www.flipkart.com/search?marketplace=FLIPKART&q=Anarkali%20suit%20for%20women,%20deep%20red%20silk",
+            "topResults": [
+              {
+                "name": "Women Viscose Rayon Kurta, Pant And Dupatta Set",
+                "current_price": 949,
+                "link": "https://www.flipkart.com/tanvifashion-women-kurta-pant-dupatta-set/p/itm4864564158ed2",
+                "thumbnail": "https://rukminim2.flixcart.com/image/612/612/xif0q/ethnic-set/z/l/7/l-shiv08-skyblue-zari-tanvifashion-original-imagnshan98ukrkw.jpeg?q=70"
+              },
+              {
+                "name": "Solid Rayon Blend Stitched Anarkali Gown",
+                "current_price": 779,
+                "link": "https://www.flipkart.com/panjurli-anarkali-gown/p/itm2781aae3fd047",
+                "thumbnail": "https://rukminim2.flixcart.com/image/612/612/xif0q/gown/u/4/o/na-3xl-short-sleeve-stitched-miss-10-miss-clothing-na-original-imagm6t7deafgkyr.jpeg?q=70"
+              },
+              {
+                "name": "Women Fit and Flare Multicolor Dress",
+                "current_price": 299,
+                "link": "https://www.flipkart.com/maruti-fab-women-fit-flare-multicolor-dress/p/itm70d8692c7ac7e",
+                "thumbnail": "https://rukminim2.flixcart.com/image/612/612/k66sh3k0/dress/8/n/b/xxl-02-nidhi-creation-original-imafzkby6cegbbfp.jpeg?q=70"
+              },
+              {
+                "name": "Self Design Anarkali Kurta, Bottom &amp; Dupatta Set",
+                "current_price": 499,
+                "link": "https://www.flipkart.com/bruno-self-design-anarkali-kurta-bottom-dupatta-set/p/itm92c64db21f96d",
+                "thumbnail": "https://rukminim2.flixcart.com/image/612/612/xif0q/salwar-kurta-dupatta/h/k/7/l-haar-bruno-original-imagfxezvdbfeaw4-bb.jpeg?q=70"
+              },
+              {
+                "name": "Women Georgette Kurta and Dupatta Set",
+                "current_price": 499,
+                "link": "https://www.flipkart.com/vidya-fashion-mart-women-kurta-dupatta-set/p/itmd09be3c60ca67",
+                "thumbnail": "https://rukminim2.flixcart.com/image/612/612/xif0q/ethnic-set/n/r/n/xl-purplegown-m-nejadhari-original-imaggurhbptfyt8u.jpeg?q=70"
+              }
+            ]
           },
           "Statement Earrings": {
-              "searchLink": "https://www.flipkart.com/search?marketplace=FLIPKART&q=Find%20gold%20statement%20earrings%20with%20intricate%20detailing",
-              "topResults": [
-                  {
-                      "name": "Afghani Style Earrings Beads Alloy Chandbali Earring",
-                      "current_price": 324,
-                      "link": "https://www.flipkart.com/ryka-collection-afghani-style-earrings-beads-alloy-chandbali-earring/p/itmaae123630ed87",
-                      "thumbnail": []
-                  },
-                  {
-                      "name": "Salty ALPHA Dash Studs Silver Studs Earrings for Mens M...",
-                      "current_price": 379,
-                      "link": "https://www.flipkart.com/salty-alpha-dash-studs-silver-earrings-mens-metal-stud-earring/p/itmbac00d5ce6c68",
-                      "thumbnail": []
-                  },
-                  {
-                      "name": "Gold tassel circle stud Crystal Alloy Tassel Earring",
-                      "current_price": 328,
-                      "link": "https://www.flipkart.com/yourblingbox-gold-tassel-circle-stud-crystal-alloy-earring/p/itmaab22162e4494",
-                      "thumbnail": []
-                  },
-                  {
-                      "name": "American Diamond Gold Plated Earrings Set Zircon Brass ...",
-                      "current_price": 319,
-                      "link": "https://www.flipkart.com/yourblingbox-american-diamond-gold-plated-earrings-set-zircon-brass-tassel-earring/p/itm820e8db611100",
-                      "thumbnail": []
-                  },
-                  {
-                      "name": "Antique Traditional Ethnic South Indian Temple jhumkas ...",
-                      "current_price": 299,
-                      "link": "https://www.flipkart.com/meenaz-antique-traditional-ethnic-south-indian-temple-jhumkas-pearl-copper-brass-clip-on-earring/p/itm3c13fb6c16e0a",
-                      "thumbnail": []
-                  }
-              ]
+            "searchLink": "https://www.flipkart.com/search?marketplace=FLIPKART&q=Long%20chandelier%20earrings%20for%20women,%20gold",
+            "topResults": [
+              {
+                "name": "Combo of 12 pair Small Colorful Traditional South India...",
+                "current_price": 289,
+                "link": "https://www.flipkart.com/fashion-fusion-combo-12-pair-small-colorful-traditional-south-indian-temple-enamel-meena-alloy-jhumki-earring/p/itmebcabb7e1f3a5",
+                "thumbnail": "https://rukminim2.flixcart.com/image/612/612/kzrbiq80/earring/o/k/f/na-ffc1206-fashion-fusion-original-imagbp9qf6muna5t.jpeg?q=70"
+              },
+              {
+                "name": "100 Golden and 100 Silver Earrings Hooks combo for jewe...",
+                "current_price": 299,
+                "link": "https://www.flipkart.com/store-of-arts-pp-creations-100-golden-silver-earrings-hooks-combo-jewelry-making-pack-2-metal-drops-danglers/p/itmc0d942fdb2972",
+                "thumbnail": "https://rukminim2.flixcart.com/image/612/612/xif0q/earring/e/d/u/na-gsjhen-store-of-arts-pp-creations-original-imaggbr8uhwbwh8k.jpeg?q=70"
+              },
+              {
+                "name": "TILAK DESIGN LONG KUNDAN LONG EARRINGS SET IN LITE GOLD...",
+                "current_price": 388,
+                "link": "https://www.flipkart.com/knigght-angel-jewels-tilak-design-long-kundan-earrings-set-lite-gold-polish-metal-drops-danglers/p/itm125215f1669df",
+                "thumbnail": "https://rukminim2.flixcart.com/image/612/612/l3os4280/earring/l/y/s/na-er56-tilak-long-kundan-long-earrings-set-knigght-angel-jewels-original-imagercrbexgtgzh.jpeg?q=70"
+              },
+              {
+                "name": "NEW! Touchstone Indian Bollywood Desire Trendy Filigree...",
+                "current_price": 599,
+                "link": "https://www.flipkart.com/touchstone-new-indian-bollywood-desire-trendy-filigree-white-rhinestone-faux-tourmaline-designer-jewelry-chandelier-earrings-silver-tone-women-alloy-drops-danglers/p/itm10d582020e6d2",
+                "thumbnail": "https://rukminim2.flixcart.com/image/612/612/kll7bm80/earring/b/p/e/pwetl349-05az-w-touchstone-original-imagynsksp5vhyfg.jpeg?q=70"
+              },
+              {
+                "name": "PANCHI LONG KUNDAN LONG EARRINGS SET IN LITE GOLD POLIS...",
+                "current_price": 360,
+                "link": "https://www.flipkart.com/knigght-angel-jewels-panchi-long-kundan-earrings-set-lite-gold-polish-metal-drops-danglers/p/itm0b3a0ad8b76d9",
+                "thumbnail": "https://rukminim2.flixcart.com/image/612/612/l3os4280/earring/8/y/u/na-er55-panchi-long-kundan-long-earrings-set-knigght-angel-original-imagerctdcgfemkd.jpeg?q=70"
+              }
+            ]
           },
-          "Ethnic Footwear": {
-              "searchLink": "https://www.flipkart.com/search?marketplace=FLIPKART&q=Buy%20embellished%20juttis%20for%20women%20in%20Moradabad",
-              "topResults": [
-                  {
-                      "name": "Punjabi Stone Work Ethnic Shoes Jutis For Women",
-                      "current_price": 566,
-                      "link": "https://www.flipkart.com/catbird-punjabi-stone-work-ethnic-shoes-jutis-women/p/itmd94e642f4e0e5",
-                      "thumbnail": []
-                  },
-                  {
-                      "name": "Men's Suede Matrial Blue Casual Ethnic Mule Inddor Shoe...",
-                      "current_price": 899,
-                      "link": "https://www.flipkart.com/yuvrato-baxi-men-s-suede-matrial-blue-casual-ethnic-mule-inddor-shoes-women/p/itm1667477b20743",
-                      "thumbnail": []
-                  },
-                  {
-                      "name": "Beautiful Soft Flat Jutti | Special Design | Best Comfo...",
-                      "current_price": 210,
-                      "link": "https://www.flipkart.com/zoyi-beautiful-soft-flat-jutti-special-design-best-comfortable-skin-friendly-bellies-women/p/itm5a7c5e99b8628",
-                      "thumbnail": []
-                  },
-                  {
-                      "name": "Sunflower Beige Gold Genuine Soft Leather | Bite Free E...",
-                      "current_price": 2699,
-                      "link": "https://www.flipkart.com/fulkari-sunflower-beige-gold-genuine-soft-leather-bite-free-embroidered-jutis-40-corporate-casuals-women/p/itm4cfacbd941d8f",
-                      "thumbnail": []
-                  },
-                  {
-                      "name": "Slip On For Women",
-                      "current_price": 2499,
-                      "link": "https://www.flipkart.com/fulkari-slip-women/p/itm96febbb5be52f",
-                      "thumbnail": []
-                  }
-              ]
+          "Embellished Sandals": {
+            "searchLink": "https://www.flipkart.com/search?marketplace=FLIPKART&q=Embellished%20sandals%20for%20women,%20gold",
+            "topResults": [
+              {
+                "name": "Women Gold Flats Sandal",
+                "current_price": 749,
+                "link": "https://www.flipkart.com/marc-loire-women-gold-flats/p/itm8087f04a02d8c",
+                "thumbnail": "https://rukminim2.flixcart.com/image/612/612/kylvr0w0/sandal/r/i/v/8-ml000338-marc-loire-gold-original-imagassexehth5hh.jpeg?q=70"
+              },
+              {
+                "name": "Women Gold Casual Sandal",
+                "current_price": 735,
+                "link": "https://www.flipkart.com/marc-loire-women-gold-casual/p/itm6a993a5a55254",
+                "thumbnail": "https://rukminim2.flixcart.com/image/612/612/xif0q/sandal/c/i/k/5-ml10010437-marc-loire-rose-gold-original-imaghnygbgnxqfbd.jpeg?q=70"
+              },
+              {
+                "name": "Women Gold Heels Sandal",
+                "current_price": 499,
+                "link": "https://www.flipkart.com/denill-women-gold-heels/p/itmf8y7yyn7zs8tq",
+                "thumbnail": "https://rukminim2.flixcart.com/image/612/612/xif0q/sandal/y/u/z/-original-imagg5ubq8knsjnm.jpeg?q=70"
+              },
+              {
+                "name": "Women Gold Flats Sandal",
+                "current_price": 499,
+                "link": "https://www.flipkart.com/kliev-paris-women-gold-flats/p/itmc2b8d32558239",
+                "thumbnail": "https://rukminim2.flixcart.com/image/612/612/xif0q/sandal/i/g/k/3-1003-golden-3-kliev-paris-golden-original-imagseky7kf5jkxd.jpeg?q=70"
+              },
+              {
+                "name": "Women Gold Flats Sandal",
+                "current_price": 499,
+                "link": "https://www.flipkart.com/strasse-paris-women-gold-flats/p/itmef31c84bfa55d",
+                "thumbnail": "https://rukminim2.flixcart.com/image/612/612/xif0q/sandal/i/g/k/3-1003-golden-3-kliev-paris-golden-original-imagseky7kf5jkxd.jpeg?q=70"
+              }
+            ]
           },
-          "Clutch Bag": {
-              "searchLink": "https://www.flipkart.com/search?marketplace=FLIPKART&q=Shop%20embroidered%20clutch%20bag%20for%20Rakshabandhan",
-              "topResults": [
-                  {
-                      "name": "Men Casual Brown Artificial Leather Wallet - Regular Si...",
-                      "current_price": 295,
-                      "link": "https://www.flipkart.com/highlark-men-casual-brown-artificial-leather-wallet/p/itmfc15becad7fa1",
-                      "thumbnail": []
-                  },
-                  {
-                      "name": "Blue Girls Clutch",
-                      "current_price": 340,
-                      "link": "https://www.flipkart.com/rak-designs-blue-clutch-mobile-sling-bag/p/itm05b8cc2138139",
-                      "thumbnail": []
-                  },
-                  {
-                      "name": "Party Purple  Clutch",
-                      "current_price": 322,
-                      "link": "https://www.flipkart.com/sriaog-party-purple-clutch/p/itma2cda689d5120",
-                      "thumbnail": []
-                  },
-                  {
-                      "name": "Women Maroon Hand-held Bag - Regular Size",
-                      "current_price": 399,
-                      "link": "https://www.flipkart.com/fancy-walas-women-maroon-hand-held-bag/p/itmb1cd2266fbcfb",
-                      "thumbnail": []
-                  },
-                  {
-                      "name": "Party Multicolor  Clutch",
-                      "current_price": 299,
-                      "link": "https://www.flipkart.com/rapid-costore-party-multicolor-clutch/p/itm519591fefdf0e",
-                      "thumbnail": []
-                  }
-              ]
+          "Ethnic Clutch": {
+            "searchLink": "https://www.flipkart.com/search?marketplace=FLIPKART&q=Ethnic%20clutch,%20gold%20or%20silver",
+            "topResults": [
+              {
+                "name": "Casual, Party, Formal, Sports Maroon  Clutch  - Regular...",
+                "current_price": 379,
+                "link": "https://www.flipkart.com/yessbenza-casual-party-formal-sports-maroon-clutch/p/itm83d9bdd1039b2",
+                "thumbnail": "https://rukminim2.flixcart.com/image/612/612/kle24cw0/clutch/k/z/k/women-s-and-girls-handclutch-mobile-handbag-ykfc-105-503-ladies-original-imagyj26u4tg2qge.jpeg?q=70"
+              },
+              {
+                "name": "Casual Blue  Clutch",
+                "current_price": 419,
+                "link": "https://www.flipkart.com/gm-creations-casual-blue-clutch/p/itm3775802a30c78",
+                "thumbnail": "https://rukminim2.flixcart.com/image/612/612/kx6fwcw0/clutch/m/i/v/cl-002b-002-clutch-gm-creations-original-imag9p7kxehz4yvy.jpeg?q=70"
+              },
+              {
+                "name": "Casual Silver  Clutch",
+                "current_price": 949,
+                "link": "https://www.flipkart.com/shakuntla-handicraft-casual-silver-clutch/p/itm96ab2cb33c6cb",
+                "thumbnail": "https://rukminim2.flixcart.com/image/612/612/xif0q/clutch/s/p/p/women-girls-bridal-metal-sea-shell-clutch-party-sling-bag-ethnic-original-imagrrvhcr8zfkhg.jpeg?q=70"
+              },
+              {
+                "name": "Party Silver  Clutch",
+                "current_price": 599,
+                "link": "https://www.flipkart.com/nehd-party-silver-clutch/p/itm550ea5dd5468c",
+                "thumbnail": "https://rukminim2.flixcart.com/image/612/612/xif0q/clutch/t/h/5/the-beautiful-women-s-handbag-silver-nehd0075-clutch-nehd-original-imaggugh37cx3nwf.jpeg?q=70"
+              },
+              {
+                "name": "Casual Silver  Clutch",
+                "current_price": 299,
+                "link": "https://www.flipkart.com/andaria-casual-silver-clutch/p/itm17d87ce22ee11",
+                "thumbnail": "https://rukminim2.flixcart.com/image/612/612/xif0q/clutch/r/r/5/c131-c131-clutch-andaria-original-imagrbd7jrvfjyaa.jpeg?q=70"
+              }
+            ]
+          },
+          "Mehndi": {
+            "searchLink": "https://www.flipkart.com/search?marketplace=FLIPKART&q=Intricate%20mehndi%20designs",
+            "topResults": [
+              {
+                "name": "OZONE Ayurvedics Henna Conditioner - 100 g - Pack of 8",
+                "current_price": 359,
+                "link": "https://www.flipkart.com/ozone-ayurvedics-henna-conditioner-100-g-pack-8/p/itmf7a637db1c0b4",
+                "thumbnail": "https://rukminim2.flixcart.com/image/612/612/xif0q/conditioner/n/n/v/800-ayurvedics-henna-conditioner-100-g-pack-of-8-ozone-original-imagm6y27g4yjndd.jpeg?q=70"
+              },
+              {
+                "name": "IVANA'S Heena Mehandi Tatto Stencil Set for | Hand | Bo...",
+                "current_price": 259,
+                "link": "https://www.flipkart.com/ivana-s-heena-mehandi-tatto-stencil-set-hand-body-fingure-face-art-temporary-kids-girls-women-design-596/p/itm1b653d493abcb",
+                "thumbnail": "https://rukminim2.flixcart.com/image/612/612/kqfj1jk0/tattoo/2/0/y/design-596-ivana-s-original-imag4gyj2thjhtjf.jpeg?q=70"
+              },
+              {
+                "name": "IVANA'S Henna Tattoo Stencil (Set of 2) Temporary (Desi...",
+                "current_price": 140,
+                "link": "https://www.flipkart.com/ivana-s-henna-tattoo-stencil-set-2-temporary-design-75/p/itmfhv3shnkfxgag",
+                "thumbnail": "https://rukminim2.flixcart.com/image/612/612/jxf05u80/tattoo/y/b/v/design-75-ivana-s-original-imafhuhtqxhmweht.jpeg?q=70"
+              },
+              {
+                "name": "IVANA'S Ivana's Stencil Premium Collection DIY Kit For ...",
+                "current_price": 140,
+                "link": "https://www.flipkart.com/ivana-s-stencil-premium-collection-diy-kit-hand-full-design-henna-tattoo-set-women-girls-kids-attractive-temporary-prh-49/p/itmbe4d6ce52c021",
+                "thumbnail": "https://rukminim2.flixcart.com/image/612/612/kr58yvk0/tattoo/s/g/n/prh-49-ivana-s-original-imag4zywghzyv2eh.jpeg?q=70"
+              },
+              {
+                "name": "IVANA'S Henna Tattoo Stencil Set for 2 Women Girls Hand...",
+                "current_price": 169,
+                "link": "https://www.flipkart.com/ivana-s-henna-tattoo-stencil-set-2-women-girls-hand-finger-body-paint-temporary-body-art/p/itmff2rkmn2gugz4",
+                "thumbnail": "https://rukminim2.flixcart.com/image/612/612/l19m93k0/tattoo/r/5/b/5-10-design-4-ivana-s-2-original-imagcvaqgh8z8xca.jpeg?q=70"
+              }
+            ]
           }
+        }
       }
-  }
     return data;
   } catch (error) {
     console.error("Fetch error:", error);
