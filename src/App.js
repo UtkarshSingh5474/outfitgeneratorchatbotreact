@@ -14,7 +14,7 @@ var userInfo = "Name:Rishabh ,Age:26, Sex:Male, BodyType:Fit, City:Ghaziabad";
 var userPastOrders = "";
 var socialMediaTrendInfo = "";
 // Define the initial system message based on your variables
-const initialSystemMessage = {
+var initialSystemMessage = {
   role: "system",
   content: `${chatbotBehaviour},userInfo:${userInfo},userPastOrders:${userPastOrders},socialMediaTrendInfo:${socialMediaTrendInfo}`,
 };
@@ -31,6 +31,12 @@ class Chatbot extends React.Component {
     userInfo = newUserInfo;
     console.log("newUserInfo:", newUserInfo);
     console.log("userInfo:", userInfo);
+    initialSystemMessage = {
+      role: "system",
+      content: `${chatbotBehaviour},userInfo:${userInfo},userPastOrders:${userPastOrders},socialMediaTrendInfo:${socialMediaTrendInfo}`,
+    };
+
+    messages = [initialSystemMessage]; 
   };
 
   render() {
@@ -90,7 +96,7 @@ class ApiResponseStep extends React.Component {
 
     //add userInput to messages array
     messages.push(userInput); // Add user input to messages array
-    console.log("userInfoSent:", userInfo);
+    console.log("messageSent:", messages);
 
     // Get the combined outfit with search results text from the API
     //send messages array to this function argument

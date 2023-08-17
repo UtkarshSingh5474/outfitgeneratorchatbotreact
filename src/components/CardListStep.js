@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import React from "react";
 
 class CardListStep extends React.Component {
@@ -23,12 +24,24 @@ class CardListStep extends React.Component {
       borderRadius: "10px",
       backgroundColor: "#f9f9f9",
       boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+      display: "flex", // Display as a flex container
+      flexDirection: "column", // Stack the elements vertically
     };
+    
 
     const headingStyle = {
-      fontSize: "1px",
+      fontSize: "12px",
       marginTop: "10px",
+      lineHeight: "1.2", // Adjust this value as needed for the desired line height
+      maxHeight: "2.4em", // Set a max height for 2 lines of text
+      minHeight: "2.4em", // Set a min height for 2 lines of text
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      display: "-webkit-box",
+      WebkitLineClamp: 2,
+      WebkitBoxOrient: "vertical",
     };
+    
 
     const priceStyle = {
       fontWeight: "",
@@ -39,18 +52,25 @@ class CardListStep extends React.Component {
       textAlign: "center",
       backgroundColor: "yellow",
       color: "red",
-
       height: "30px",
-
+      width: "100%", // Set the width to 100% to ensure it fits within the card
       justifyContent: "center!important",
+      marginTop: "auto", // Add space at the top
+      borderTop: "1px solid #ccc", // Add a border at the top
     };
+    
 
     const imageStyle = {
-      width: "100px",
-      height: "100px",
+      minWidth: "150px", // Set the minimum width for the image
+      minHeight: "150px", // Set the minimum height for the image
+      maxWidth: "150px", // Set the maximum width for the image
+      maxHeight: "150px", // Set the maximum height for the image
+      width: "auto", // Allow the width to adjust based on the image aspect ratio
+      height: "auto", // Allow the height to adjust based on the image aspect ratio
       margin: "0 auto",
       display: "block",
     };
+    
 
     const viewSimilarStyle = {
       backgroundColor: "#007bff",
@@ -67,7 +87,6 @@ class CardListStep extends React.Component {
       justifyContent: "center",
     };
     const containerStyle = {
-      marginTop: "20px", // Add some margin at the top
       marginBottom: "40px", // Add some margin at the bottom
     };
 
@@ -75,7 +94,7 @@ class CardListStep extends React.Component {
       <div style={containerStyle}>
         {Object.keys(apiData).map((category, index) => (
           <div key={index}>
-            <h2>{category}</h2>
+            <h2 style={{fontSize:"24px",marginTop:"10px"}}>{category}</h2>
             <div style={{ display: "flex", flexWrap: "wrap" }}>
               {apiData[category].topResults.slice(0, 5).map((item, i) => (
                 <div style={cardStyle} className="cardStyle" key={i}>
@@ -88,24 +107,24 @@ class CardListStep extends React.Component {
                   )}
                   <h3 style={headingStyle}>{item.name}</h3>
                   <p style={priceStyle}>Price: ₹{item.current_price}</p>
-                  <a
+                  <Button
                     style={linkStyle}
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     View Product
-                  </a>
+                  </Button>
                 </div>
               ))}
-              <a
+              <Button
                 href={apiData[category].searchLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={viewSimilarStyle}
               >
                 View Similar
-              </a>
+              </Button>
             </div>
           </div>
         ))}

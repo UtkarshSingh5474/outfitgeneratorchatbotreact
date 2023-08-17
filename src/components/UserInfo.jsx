@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { TextField, Button } from "@mui/material";
-import RadioButtons from "./RadioButtons";
+import { TextField, Button, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from "@mui/material";
+
 
 // Define CSS constants
 const popupContainerStyle = {
@@ -31,32 +31,31 @@ const popupHeaderStyle = {
   borderBottom: "2px solid black",
 };
 
+
 function UserInfo(props) {
-  const [popup, setPop] = useState(false);
-  const [age, setAge] = useState(""); // Local state for age
-  const [city, setCity] = useState(""); // Local state for city
-  const [sex, setSex] = useState(""); // Local state for sex
+  const [age, setAge] = useState("");
+  const [city, setCity] = useState("");
+  const [sex, setSex] = useState("female"); // Update the default gender as needed
 
   const closePopup = () => {
     props.change(null);
   };
+
   const handleSubmit = () => {
-    console.log(props.userInfo);
-    // Construct the new userInfo object
     const newUserInfo = {
-      Age: age, // Update age
-      City: city, // Update city
-      Sex: sex, // Update sex
+      Age: age,
+      City: city,
+      Sex: sex,
     };
 
-    props.updateUserInfo(JSON.stringify(newUserInfo)); // Call the callback to update the userInfo
-
-    // Clear the local state
+    props.updateUserInfo(JSON.stringify(newUserInfo));
     setAge("");
     setCity("");
-    setSex("");
-
     closePopup();
+  };
+
+  const handleSexChange = (event) => {
+    setSex(event.target.value);
   };
 
   return (
@@ -89,10 +88,19 @@ function UserInfo(props) {
             />
             <br />
             <br />
-            <RadioButtons
-              selectedValue={sex}
-              handleChange={(value) => setSex(value)}
-            />
+            <FormControl component="fieldset">
+              <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
+              <RadioGroup
+                aria-labelledby="demo-radio-buttons-group-label"
+                name="radio-buttons-group"
+                value={sex}
+                onChange={handleSexChange}
+              >
+                <FormControlLabel value="female" control={<Radio />} label="Female" />
+                <FormControlLabel value="male" control={<Radio />} label="Male" />
+                <FormControlLabel value="other" control={<Radio />} label="Other" />
+              </RadioGroup>
+            </FormControl>
             <br />
             <br />
             <Button onClick={handleSubmit} variant="contained" color="primary">
