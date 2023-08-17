@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TextField } from "@mui/material";
+import { TextField, Button } from "@mui/material";
 import RadioButtons from "./RadioButtons";
 
 // Define CSS constants
@@ -35,11 +35,17 @@ function PopUp() {
     const [popup, setPop] = useState(false);
 
     const handleClickOpen = () => {
-        setPop(!popup);
+        setPop(true);
     };
 
     const closePopup = () => {
         setPop(false);
+    };
+
+    const handleSubmit = () => {
+        // Add your submit logic here
+        // For now, we'll just close the popup
+        closePopup();
     };
 
     return (
@@ -71,6 +77,11 @@ function PopUp() {
                             <br />
                             <br />
                             <RadioButtons />
+                            <br />
+                            <br />
+                            <Button onClick={handleSubmit} variant="contained" color="primary">
+                                Submit
+                            </Button>
                         </div>
                     </div>
                 ) : (
