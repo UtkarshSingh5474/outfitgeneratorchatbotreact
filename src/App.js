@@ -23,6 +23,16 @@ var messages = [initialSystemMessage]; // Initialize messages array with initial
 
 
 class Chatbot extends React.Component {
+  state = {
+    userInfo: userInfo, // Initialize userInfo in the state
+  };
+
+  updateUserInfoCallback = (newUserInfo) => {
+    this.setState({ userInfo: newUserInfo });
+    userInfo = newUserInfo;
+    console.log("newUserInfo:", newUserInfo);
+    console.log("userInfo:", userInfo);
+  };
 
 
   render() {
@@ -57,7 +67,7 @@ class Chatbot extends React.Component {
     return (
       <div className="root">
         
-        <Header/>
+        <Header userInfo={this.state.userInfo} updateUserInfo={this.updateUserInfoCallback}/>
         <ChatBot
           style={{ width: '90%', height: '80vh', top: '5vh', left: '5vw' }}
           steps={steps}
@@ -84,6 +94,7 @@ class ApiResponseStep extends React.Component {
 
     //add userInput to messages array
     messages.push(userInput); // Add user input to messages array
+    console.log("userInfoSent:", userInfo);
 
 
     // Get the combined outfit with search results text from the API
