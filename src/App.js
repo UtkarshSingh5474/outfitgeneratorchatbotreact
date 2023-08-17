@@ -114,6 +114,9 @@ class Chatbot extends React.Component {
           updateUserPastOrders={this.updateUserPastOrders}
         />
         <ChatBot
+        submitButtonStyle={{backgroundColor:"#FADB22"}}
+        botAvatar="https://www.citypng.com/public/uploads/preview/hd-flipkart-round-logo-icon-transparent-png-11664325137typezbr9k9.png"
+          headerTitle="Fashion Outfit Generator Chatbot"
           style={{ width: "90%", height: "80vh", top: "5vh", left: "5vw" }}
           steps={steps}
           handleEnd={() => console.log("Chat ended")}

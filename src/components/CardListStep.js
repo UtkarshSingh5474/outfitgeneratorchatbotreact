@@ -30,7 +30,7 @@ class CardListStep extends React.Component {
     
 
     const headingStyle = {
-      fontSize: "12px",
+      fontSize: "14px",
       marginTop: "10px",
       lineHeight: "1.2", // Adjust this value as needed for the desired line height
       maxHeight: "2.4em", // Set a max height for 2 lines of text
@@ -55,8 +55,9 @@ class CardListStep extends React.Component {
       height: "30px",
       width: "100%", // Set the width to 100% to ensure it fits within the card
       justifyContent: "center!important",
-      marginTop: "auto", // Add space at the top
-      borderTop: "1px solid #ccc", // Add a border at the top
+      border: "1px solid #ccc", // Add a border at the top
+      borderRadius: "8px",
+      alignItems: "center",
     };
     
 

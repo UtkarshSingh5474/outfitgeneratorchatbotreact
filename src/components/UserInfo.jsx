@@ -17,7 +17,7 @@ const popupStyle = {
   width: "100%",
   position: "absolute",
   top: "50%",
-  right: "20%",
+  left: "25%",
   zIndex: 100,
   backgroundColor: "#C0C0C0",
   borderRadius: "15px",
