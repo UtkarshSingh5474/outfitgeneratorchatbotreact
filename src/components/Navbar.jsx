@@ -2,7 +2,6 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import ImageAvatars from './Avatar';
-import { padding } from '@mui/system';
 import PopUp from './Popup';
 
 function Header() {

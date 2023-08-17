@@ -26,6 +26,7 @@ class CardListStep extends React.Component {
       };
   
       const headingStyle = {
+        fontSize: '1px',
         marginTop: '10px',
       };
   
@@ -89,7 +90,7 @@ class CardListStep extends React.Component {
       />
     )}
     <h3 style={headingStyle}>{item.name}</h3>
-    <p style={priceStyle}>Price: ${item.current_price}</p>
+    <p style={priceStyle}>Price: ₹{item.current_price}</p>
     <a
       style={linkStyle}
       href={item.link}
