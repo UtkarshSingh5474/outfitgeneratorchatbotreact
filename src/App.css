@@ -1,85 +1,81 @@
+/* App.css */
+
+/* General styling */
+body {
+  overflow: hidden;
+  background-color: #E4EDF1 !important;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+.glfuN{
+  background-color: #2874F0 !important;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  /* Adjust chatbot bubble padding */
+  .rsc-ts-bubble {
+    padding-bottom: 20px;
+  }
+
+  /* Adjust chatbot container */
+  .rsc-ts {
+    padding-bottom: 40px;
+  }
+
+  /* Adjust card style for smaller screens */
+  .cardStyle {
+    height: auto;
+  }
+
+  /* Adjust card image for smaller screens */
+  .cardStyle img {
+    height: 150px !important;
+  }
+
+  /* Adjust font size for smaller screens */
+  .lifvqk {
+    font-size: 24px;
+  }
+}
+
+/* Other existing styles */
+
 .App {
   text-align: center;
 }
+
 #root {
   height: 100vh;
 }
- .rsc-ts-bubble{
+
+.rsc-ts-bubble {
   padding-bottom: 40px;
- }
-
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.chatbot-container {
+  margin: 20px; /* Adjust margins as needed */
+  margin-top: 40px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .hDUXUW {
   position: fixed !important;
   bottom: 0;
   width: 100%;
 }
-
-body{
-  background-color: #f1f3f6;
-}
-
 .fBGGBn{
-  height: 90% !important;
+  height: 80% !important;
 }
 
-.glfuN{
-  background-color: #2874F0 !important;
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  /* Adjust margins and width for smaller screens */
+  .chatbot-container {
+    margin: 10px;
+  }
 }
 
-.hQsUiY{
-  background-color: #2874F0 !important;
-}
-.lifvqk{
-  font-size: 30px;
-}
-
-.cardStyle{
-  height: 320px;
-  background-color: #282c34;
-}
-
-.cardStyle img{
-  height: 200px !important;
-  width: 100%!important;
-  object-fit: cover;
-}
-
-.rsc-ts{
-  padding-bottom: 60px;
+.chatbot {
+  width: 100%; /* Adjust the width to your preference */
+  margin: 0 auto; /* Center horizontally */
 }
