@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { TextField } from "@mui/material";
+import { TextField, Button } from "@mui/material";
 import RadioButtons from "./RadioButtons";
 
 // Define CSS constants
@@ -31,29 +31,16 @@ const popupHeaderStyle = {
   borderBottom: "2px solid black",
 };
 
-const OrderList = () => {
-  const [orders, setOrders] = useState([]);
-
-  function getOrders() {
-    const data = ["a", "b", "c"];
-    setOrders(data);
-  }
-  useEffect(() => {
-    getOrders();
-  }, []);
-  return (
-    <>
-      {orders.map((order) => {
-        return (
-          <div key={order}>
-            <h1>{order}</h1>
-          </div>
-        );
-      })}
-    </>
-  );
-};
 function PastOrders(props) {
+    const [custompastorderinformation, setCustomPastOrderInformation] = useState("");
+
+  const handleSubmit = () => {
+    
+
+    props.updateUserPastOrders(JSON.stringify(custompastorderinformation));
+    setCustomPastOrderInformation("");
+    closePopup();
+  };
   const closePopup = () => {
     props.change(null);
   };
@@ -68,7 +55,21 @@ function PastOrders(props) {
                 X
               </h1>
             </div>
-            <OrderList />
+            <br />
+            <br />
+            <TextField
+              style={{ width: "80%", height: "80%", minHeight: "80%" }}
+              id="outlined-basic"
+              label="Custom Past Order Information"
+              variant="outlined"
+              value={custompastorderinformation}
+              onChange={(e) => setCustomPastOrderInformation(e.target.value)}
+            />
+            <br />
+            <br />
+            <Button onClick={handleSubmit} variant="contained" color="primary">
+              Submit
+            </Button>
           </div>
         </div>
       </div>

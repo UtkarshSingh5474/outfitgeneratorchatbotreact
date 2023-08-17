@@ -66,7 +66,12 @@ function Header(props) {
                   change={setChange}
                 />
               ) : null}
-              {choice === 2 ? <PastOrders change={setChange} /> : null}
+              {choice === 2 ? (
+                <PastOrders
+                updateUserPastOrders={props.updateUserPastOrders}
+                  change={setChange}
+                />
+              ) : null}
               {choice === 3 ? <SocialMediaTrends change={setChange} /> : null}
             </Nav>
           </Container>

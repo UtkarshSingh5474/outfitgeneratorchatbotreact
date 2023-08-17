@@ -5,6 +5,10 @@ import CardListStep from "./components/CardListStep";
 import { getCombinedOutfitTextWithSearchResultsApiRequest } from "./api";
 import Header from "./components/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 var chatbotBehaviour =
   "As a Fashion Outfit Generator Chatbot, Generate a outfit according to the user message. Specify all the clothing item seperatly by number in detail Specify color and other properties. Consider and remember the userInfo, userPastOrders, socialMediaTrendInfo.";
@@ -23,20 +27,53 @@ var messages = [initialSystemMessage]; // Initialize messages array with initial
 
 class Chatbot extends React.Component {
   state = {
-    userInfo: userInfo, // Initialize userInfo in the state
+    userInfo: userInfo,
+    userPastOrders:userPastOrders // Initialize userInfo in the state
   };
 
   updateUserInfoCallback = (newUserInfo) => {
     this.setState({ userInfo: newUserInfo });
+
     userInfo = newUserInfo;
-    console.log("newUserInfo:", newUserInfo);
-    console.log("userInfo:", userInfo);
+
     initialSystemMessage = {
       role: "system",
       content: `${chatbotBehaviour},userInfo:${userInfo},userPastOrders:${userPastOrders},socialMediaTrendInfo:${socialMediaTrendInfo}`,
     };
 
-    messages = [initialSystemMessage]; 
+    messages = [initialSystemMessage];
+    toast.success('User Information Updated Successfully!\nChat History is resetted', {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+  };
+  updateUserPastOrders = (customPastOrderInformation) => {
+    this.setState({ userPastOrders: customPastOrderInformation });
+
+    userPastOrders = customPastOrderInformation;
+
+    initialSystemMessage = {
+      role: "system",
+      content: `${chatbotBehaviour},userInfo:${userInfo},userPastOrders:${userPastOrders},socialMediaTrendInfo:${socialMediaTrendInfo}`,
+    };
+
+    messages = [initialSystemMessage];
+    toast.success('Past Order Updated Successfully!\nChat History is resetted', {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
   };
 
   render() {
@@ -68,9 +105,13 @@ class Chatbot extends React.Component {
 
     return (
       <div className="root">
+        <ToastContainer/>
+
         <Header
           userInfo={this.state.userInfo}
+          userPastOrders={this.state.userPastOrders}
           updateUserInfo={this.updateUserInfoCallback}
+          updateUserPastOrders={this.updateUserPastOrders}
         />
         <ChatBot
           style={{ width: "90%", height: "80vh", top: "5vh", left: "5vw" }}
@@ -96,6 +137,7 @@ class ApiResponseStep extends React.Component {
 
     //add userInput to messages array
     messages.push(userInput); // Add user input to messages array
+    console.log("orderSent:", userPastOrders);
     console.log("messageSent:", messages);
 
     // Get the combined outfit with search results text from the API
