@@ -1,44 +1,84 @@
-import React, { useState }  from "react";
-import './Popup.css';
+import React, { useState } from "react";
 import { TextField } from "@mui/material";
 import RadioButtons from "./RadioButtons";
 
+// Define CSS constants
+const popupContainerStyle = {
+    textAlign: "center",
+    backgroundColor: "rgba(39, 145, 216, 0.710)",
+    width: "100%",
+    position: "absolute",
+    top: "10vh",
+    zIndex: 1000000,
+};
 
-function PopUp(){
-    const [popup,setPop]=useState(false)
-    const handleClickOpen=()=>{
-        setPop(!popup)
-    }
-    const closePopup=()=>{
-        setPop(false)
-    }
-    return(
+const popupStyle = {
+    height: "500px",
+    width: "100%",
+    backgroundColor: "white",
+    position: "absolute",
+    top: "25%",
+    right: "20%",
+    zIndex: 100,
+    backgroundColor: "#C0C0C0",
+    borderRadius: "15px",
+};
+
+const popupHeaderStyle = {
+    display: "flex",
+    justifyContent: "space-between",
+    padding: "0 30px 0 15px",
+    borderBottom: "2px solid black",
+};
+
+function PopUp() {
+    const [popup, setPop] = useState(false);
+
+    const handleClickOpen = () => {
+        setPop(!popup);
+    };
+
+    const closePopup = () => {
+        setPop(false);
+    };
+
+    return (
         <div>
             <button onClick={handleClickOpen}>User Info</button>
             <div>
-                {
-                    popup?
-                    <div className="main2">
-                        <div className="popup">
-                            <div className="popup-header">
+                {popup ? (
+                    <div style={popupContainerStyle} className="popup">
+                        <div style={popupStyle} className="popup">
+                            <div style={popupHeaderStyle} className="popup-header">
                                 <h1>Set User Info</h1>
                                 <h1 onClick={closePopup}>X</h1>
                             </div>
                             <br />
-                            <TextField id="outlined-basic" label="Age" variant="outlined" style={{}}/>
+                            <TextField
+                                id="outlined-basic"
+                                label="Age"
+                                variant="outlined"
+                                style={{}}
+                            />
                             <br />
                             <br />
-                            <TextField id="outlined-basic" label="City" variant="outlined" style={{}}/>
+                            <TextField
+                                id="outlined-basic"
+                                label="City"
+                                variant="outlined"
+                                style={{}}
+                            />
                             <br />
                             <br />
-                            <RadioButtons/>
-
-
+                            <RadioButtons />
                         </div>
-                    </div>:""
-                }
+                    </div>
+                ) : (
+                    ""
+                )}
             </div>
         </div>
-    )
+    );
 }
+
 export default PopUp;
