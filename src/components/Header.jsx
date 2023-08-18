@@ -19,6 +19,7 @@ function Header(props) {
       <div
         className="main"
         style={{
+          
           marginTop: "30px",
           display: "flex",
           justifyContent: "center",

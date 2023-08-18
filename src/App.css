@@ -1,16 +1,21 @@
 /* App.css */
 
+
 /* General styling */
 body {
   overflow: hidden;
-  background-color: #E4EDF1 !important;
+  background-image: url("bg.jpg");
+  background-size: cover;
   margin: 0;
   font-family: Arial, sans-serif;
   font-size: 16px;
 }
 .glfuN{
   background-color: #2874F0 !important;
+  
+  
 }
+
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
@@ -76,6 +81,22 @@ body {
 }
 
 .chatbot {
+  
   width: 100%; /* Adjust the width to your preference */
   margin: 0 auto; /* Center horizontally */
 }
+.dPdbIW {
+  background: rgba( 255, 255, 255, 0.5 )!important;
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )!important;
+backdrop-filter: blur( 4px )!important;
+-webkit-backdrop-filter: blur( 4px )!important;
+border-radius: 10px!important;
+border: 1px solid rgba( 255, 255, 255, 0.18 )!important;
+}
+
+.rsc-header{
+  background-color: #498fff !important;
+
+}
+
+
