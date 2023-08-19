@@ -26,10 +26,10 @@ function Header(props) {
       >
         <Navbar
           expand="lg"
-          bg="primary"
           variant="dark"
           className="justify-content-center"
           style={{
+            backgroundColor: "#498FFF",
             borderRadius: "100px",
             width: "90%",
             boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.3)",

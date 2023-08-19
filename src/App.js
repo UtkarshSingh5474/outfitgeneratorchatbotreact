@@ -134,6 +134,8 @@ class Chatbot extends React.Component {
             botAvatar="https://www.citypng.com/public/uploads/preview/hd-flipkart-round-logo-icon-transparent-png-11664325137typezbr9k9.png"
             headerTitle="Fashion Outfit Generator Chatbot"
             className="chatbot"
+            hideHeader={false}
+
             customStyle={{
               // Apply custom styles for the chatbot container
               height: "80vh", // Increase the height for desktop
@@ -155,7 +157,6 @@ class Chatbot extends React.Component {
           <p
             style={{
               textAlign: "center",
-              marginTop: "20px",
               fontStyle: "italic",
             }}
           >
@@ -166,6 +167,18 @@ class Chatbot extends React.Component {
     );
   }
 }
+
+class RoundedBox extends React.Component {
+  render() {
+  return (
+    <div className="rounded-box">
+      <div className="box-content">
+        <p>Fashion Outfit Generator</p>
+      </div>
+    </div>
+  );}
+};
+
 
 // Component for displaying API response
 class ApiResponseStep extends React.Component {
@@ -187,7 +200,7 @@ class ApiResponseStep extends React.Component {
     console.log("messageSent:", messages);
 
     // API request to get outfit information
-    testFunction(messages, userInfo)
+    getCombinedOutfitTextWithSearchResultsApiRequest(messages, userInfo)
       .then((response) => {
         console.log("response:", response);
         // Format API response

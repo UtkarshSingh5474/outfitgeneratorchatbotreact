@@ -21,7 +21,7 @@ class CardListStep extends React.Component {
       <div className="containerStyle">
         {Object.keys(apiData).map((category, index) => (
           <div key={index}>
-            <h2 className="categoryStyle">{category}</h2>
+            <h2 className="categoryStyle">#{category}</h2>
             <div style={{ display: "flex", flexWrap: "wrap" }}>
               {apiData[category].topResults.slice(0, 5).map((item, i) => (
                 <div className="cardStyle" key={i}>

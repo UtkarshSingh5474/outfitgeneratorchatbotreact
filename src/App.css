@@ -2,12 +2,12 @@
 
 /* General styling */
 body {
-  overflow: hidden;
   background-image: url("bg.jpg");
   background-size: cover;
   margin: 0;
   font-family: "Rubik", sans-serif;
   font-size: 16px;
+  overflow: hidden;
 }
 html {
   font-family: "Rubik", sans-serif;
@@ -92,6 +92,33 @@ html {
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
 }
 
+
 .rsc-header {
   background-color: #498fff !important;
 }
+
+.rounded-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  background-color: #498fff; /* White color with transparency */
+  border-radius: 20px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+  margin: 10px auto;
+}
+
+.box-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.box-content p {
+  font-family: "Rubik", sans-serif !important;
+  font-size: 18px;
+  margin: 0 auto;
+  color: white;
+  font-weight: bolder;
+}
+

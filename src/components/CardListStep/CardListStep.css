@@ -42,18 +42,20 @@
   font-size: 26px !important;
   margin-top: 10px !important;
   margin-top: 10px !important;
+  text-decoration: underline !important;
 }
 
 .imageStyle {
-  min-width: 160px !important; /* Set the minimum width for the image */
-  min-height: 175px !important; /* Set the minimum height for the image */
-  max-width: 160px !important; /* Set the maximum width for the image */
-  max-height: 175px !important; /* Set the maximum height for the image */
-  width: auto !important; /* Allow the width to adjust based on the image aspect ratio */
-  height: auto !important; /* Allow the height to adjust based on the image aspect ratio */
-  margin: 0 auto !important; /* Center the image horizontally */
-  display: block !important; /* Ensure the image behaves as a block element */
-  border-radius: 8px !important; /* Apply rounded corners */
+    min-width: 160px !important; /* Set the minimum width for the image */
+    min-height: 175px !important; /* Set the minimum height for the image */
+    max-width: 160px !important; /* Set the maximum width for the image */
+    max-height: 175px !important; /* Set the maximum height for the image */
+    width: auto !important; /* Allow the width to adjust based on the image aspect ratio */
+    height: auto !important; /* Allow the height to adjust based on the image aspect ratio */
+    margin: 0 auto !important; /* Center the image horizontally */
+    display: block !important; /* Ensure the image behaves as a block element */
+    border-radius: 8px !important; /* Apply rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important; /* Add a little shadow */
 }
 
 .linkStyle {
