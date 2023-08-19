@@ -19,7 +19,6 @@ function Header(props) {
       <div
         className="main"
         style={{
-          
           marginTop: "30px",
           display: "flex",
           justifyContent: "center",
@@ -38,7 +37,9 @@ function Header(props) {
         >
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <div className="d-flex align-items-center w-100 justify-content-center"> {/* Added justify-content-center */}
+            <div className="d-flex align-items-center w-100 justify-content-center">
+              {" "}
+              {/* Added justify-content-center */}
               <ImageAvatars />
               <div
                 className="line"

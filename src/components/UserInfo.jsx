@@ -1,6 +1,13 @@
 import React, { useState } from "react";
-import { TextField, Button, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from "@mui/material";
-
+import {
+  TextField,
+  Button,
+  FormControl,
+  FormLabel,
+  RadioGroup,
+  FormControlLabel,
+  Radio,
+} from "@mui/material";
 
 // Define CSS constants
 const popupContainerStyle = {
@@ -29,7 +36,6 @@ const popupHeaderStyle = {
   padding: "0 30px 0 15px",
   borderBottom: "2px solid black",
 };
-
 
 function UserInfo(props) {
   const [age, setAge] = useState("");
@@ -95,9 +101,21 @@ function UserInfo(props) {
                 value={sex}
                 onChange={handleSexChange}
               >
-                <FormControlLabel value="female" control={<Radio />} label="Female" />
-                <FormControlLabel value="male" control={<Radio />} label="Male" />
-                <FormControlLabel value="other" control={<Radio />} label="Other" />
+                <FormControlLabel
+                  value="female"
+                  control={<Radio />}
+                  label="Female"
+                />
+                <FormControlLabel
+                  value="male"
+                  control={<Radio />}
+                  label="Male"
+                />
+                <FormControlLabel
+                  value="other"
+                  control={<Radio />}
+                  label="Other"
+                />
               </RadioGroup>
             </FormControl>
             <br />

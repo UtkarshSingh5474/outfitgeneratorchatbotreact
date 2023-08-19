@@ -31,11 +31,11 @@ const popupHeaderStyle = {
 };
 
 function PastOrders(props) {
-    const [custompastorderinformation, setCustomPastOrderInformation] = useState("");
+  const [custompastorderinformation, setCustomPastOrderInformation] = useState(
+    ""
+  );
 
   const handleSubmit = () => {
-    
-
     props.updateUserPastOrders(JSON.stringify(custompastorderinformation));
     setCustomPastOrderInformation("");
     closePopup();
