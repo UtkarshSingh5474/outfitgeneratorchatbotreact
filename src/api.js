@@ -50,7 +50,7 @@ export async function getCombinedOutfitTextWithSearchResultsApiRequest(
 
   if (pattern.test(outfitOverview)) {
     clothingItems = await getOverviewTextFlipkartResults(
-      `{'userInfo':${userInfo},'outfitOverview':${outfitOverview}}`
+      `{'userInfo':"${userInfo}",'outfitOverview':"${outfitOverview}"}`
     );
   }
   return { outfitOverview: outfitOverview, clothingItems: clothingItems };

@@ -12,6 +12,9 @@ class CardListStep extends React.Component {
       });
     }, 5000); // 5000 milliseconds (5 seconds)
   }
+  handleViewProductClick = (link) => {
+    window.open(link, "_blank");
+  };
 
   render() {
     const { previousStep } = this.props;
