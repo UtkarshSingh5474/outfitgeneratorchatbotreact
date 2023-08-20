@@ -77,17 +77,19 @@ function UserInfo(props) {
   };
 
   return (
-    <div>
-      <div>
-        <div style={popupContainerStyle} className="popup">
-          <div style={popupStyle} className="popup blurEffect">
-            <div style={popupHeaderStyle} className="popup-header">
-              <h1>Set User Info</h1>
-              <h1 onClick={closePopup} style={{ cursor: "pointer" }}>
-                X
-              </h1>
-            </div>
-            <br />
+<div>
+  <div>
+    <div style={popupContainerStyle} className="popup">
+      <div style={popupStyle} className="popup blurEffect">
+        <div style={popupHeaderStyle} className="popup-header">
+          <h1>Set User Info</h1>
+          <h1 onClick={closePopup} style={{ cursor: "pointer" }}>
+            X
+          </h1>
+        </div>
+        <br />
+        <div style={{ display: "flex", flexDirection: "row" }}>
+          <div style={{ flex: 1 }}>
             <TextField
               id="outlined-basic"
               label="Age"
@@ -119,11 +121,7 @@ function UserInfo(props) {
                   control={<Radio />}
                   label="Female"
                 />
-                <FormControlLabel
-                  value="male"
-                  control={<Radio />}
-                  label="Male"
-                />
+                <FormControlLabel value="male" control={<Radio />} label="Male" />
                 <FormControlLabel
                   value="other"
                   control={<Radio />}
@@ -131,25 +129,31 @@ function UserInfo(props) {
                 />
               </RadioGroup>
             </FormControl>
-            <br />
+          </div>
+          <div style={{ flex: 1 }}>
             <TextField
               multiline
               rows={12}
               style={{ width: "80%", height: "80%", minHeight: "80%" }}
               id="outlined-basic"
-              label="Social Media Trend Information"
+              label="Add Custom User Info"
               variant="outlined"
               value={customUserInfo}
               onChange={(e) => setCustomUserInfo(e.target.value)}
             />
-            <br />
+           
+          </div>
+          
+        </div>
+        <br />
             <Button onClick={handleSubmit} variant="contained" color="primary">
               Submit
             </Button>
-          </div>
-        </div>
       </div>
     </div>
+  </div>
+</div>
+
   );
 }
 
