@@ -12,6 +12,8 @@ import { toast } from "react-toastify";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
 
+var chatbotKey = 0; // Key to trigger re-render
+
 // Define initial system behavior and user information
 var chatbotBehaviour =
   "Your name is: StyleGenie - As a Fashion Outfit Generator Chatbot, Generate a outfit according to the user message. Specify all the clothing item seperatly by number in detail Specify color and other properties. Consider and remember the userInfo, userPastOrders, socialMediaTrendInfo.";
@@ -47,11 +49,14 @@ class Chatbot extends React.Component {
     userInfo: userInfo,
     userPastOrders: userPastOrders,
     socialMediaTrendInfo: socialMediaTrendInfo,
+    chatbotKey: chatbotKey,
   };
 
   // Callback function to update user information
   updateUserInfoCallback = (newUserInfo) => {
-    this.setState({ userInfo: newUserInfo });
+    
+    this.setState({ userInfo: newUserInfo, chatbotKey: this.state.chatbotKey + 1, // Trigger re-render
+  });
     userInfo = newUserInfo;
     // Update the initial system message
     initialSystemMessage = {
@@ -59,7 +64,6 @@ class Chatbot extends React.Component {
       content: `${chatbotBehaviour},userInfo:${userInfo},userPastOrders:${userPastOrders},socialMediaTrendInfo:${socialMediaTrendInfo}`,
     };
     messages = [initialSystemMessage]; // Reset chat history
-    console.log("messages",messages)
 
     // Display success toast
     toast.success(
@@ -76,11 +80,12 @@ class Chatbot extends React.Component {
         theme: "light",
       }
     );
+
   };
   
    // Callback function to update social media trends information
    updateSocialMediaTrendInfoCallback = (newSocialMediaTrendInfo) => {
-    this.setState({ socialMediaTrendInfo: newSocialMediaTrendInfo });
+    this.setState({ socialMediaTrendInfo: newSocialMediaTrendInfo,chatbotKey: this.state.chatbotKey + 1, });
     socialMediaTrendInfo = newSocialMediaTrendInfo;
     // Update the initial system message
     initialSystemMessage = {
@@ -89,7 +94,6 @@ class Chatbot extends React.Component {
     };
 
     messages = [initialSystemMessage]; // Reset chat history
-    console.log("messages",messages)
 
     // Display success toast
     toast.success(
@@ -109,7 +113,7 @@ class Chatbot extends React.Component {
   };
   // Callback function to update user past orders
   updateUserPastOrders = (customPastOrderInformation) => {
-    this.setState({ userPastOrders: customPastOrderInformation });
+    this.setState({ userPastOrders: customPastOrderInformation,chatbotKey: this.state.chatbotKey + 1, });
     userPastOrders = customPastOrderInformation;
     // Update the initial system message
     initialSystemMessage = {
@@ -117,7 +121,6 @@ class Chatbot extends React.Component {
       content: `${chatbotBehaviour},userInfo:${userInfo},userPastOrders:${userPastOrders},socialMediaTrendInfo:${socialMediaTrendInfo}`,
     };
     messages = [initialSystemMessage]; // Reset chat history
-    console.log("messages",messages)
 
     // Display success toast
     toast.success(
@@ -148,6 +151,7 @@ class Chatbot extends React.Component {
         id: "userInput",
         user: true,
         trigger: "getResponse",
+        
       },
       {
         id: "getResponse",
@@ -163,6 +167,7 @@ class Chatbot extends React.Component {
         trigger: "userInput",
       },
     ];
+    
 
     // Render the Chatbot component
     return (
@@ -178,6 +183,7 @@ class Chatbot extends React.Component {
         />
         <div className="chatbot-container">
           <ChatBot
+            key={this.state.chatbotKey}
             // Chatbot configuration
             submitButtonStyle={{ backgroundColor: "#FADB22" }}
             botAvatar="https://www.citypng.com/public/uploads/preview/hd-flipkart-round-logo-icon-transparent-png-11664325137typezbr9k9.png"
@@ -242,6 +248,8 @@ class ApiResponseStep extends React.Component {
     // Display logs for debugging
 
     // API request to get outfit information
+    console.log("messages",messages)
+
   getCombinedOutfitTextWithSearchResultsApiRequest(messages, userInfo)
       .then((response) => {
         console.log("response:", response);
