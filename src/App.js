@@ -255,7 +255,7 @@ class ApiResponseStep extends React.Component {
     // API request to get outfit information
     console.log("messages", messages);
 
-    getCombinedOutfitTextWithSearchResultsApiRequest(messages, userInfo)
+    testFunction(messages, userInfo)
       .then((response) => {
         console.log("response:", response);
         // Format API response
