@@ -55,6 +55,8 @@ export async function getCombinedOutfitTextWithSearchResultsApiRequest(
   }
   return { outfitOverview: outfitOverview, clothingItems: clothingItems };
 }
+
+
 export async function testFunction(messages, userInfo) {
   const data = {
     outfitOverview:
