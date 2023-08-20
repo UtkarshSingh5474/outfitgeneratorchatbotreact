@@ -43,23 +43,34 @@ function UserInfo(props) {
   const [age, setAge] = useState("");
   const [city, setCity] = useState("");
   const [sex, setSex] = useState("female"); // Update the default gender as needed
+  const [customUserInfo, setCustomUserInfo] = useState("");
 
   const closePopup = () => {
     props.change(null);
   };
 
   const handleSubmit = () => {
-    const newUserInfo = {
-      Age: age,
-      City: city,
-      Sex: sex,
+
+    if(customUserInfo !== ""){
+      props.updateUserInfo(JSON.stringify(customUserInfo));
+    }else{
+      const newUserInfo = {
+        Age: age,
+        City: city,
+        Sex: sex,
+      };
+  
+  
+      props.updateUserInfo(JSON.stringify(newUserInfo));
+      setAge("");
+      setCity("");
+      setCustomUserInfo("");
+      closePopup();
     };
 
-    props.updateUserInfo(JSON.stringify(newUserInfo));
-    setAge("");
-    setCity("");
-    closePopup();
-  };
+    }
+
+    
 
   const handleSexChange = (event) => {
     setSex(event.target.value);
@@ -121,6 +132,16 @@ function UserInfo(props) {
               </RadioGroup>
             </FormControl>
             <br />
+            <TextField
+              multiline
+              rows={12}
+              style={{ width: "80%", height: "80%", minHeight: "80%" }}
+              id="outlined-basic"
+              label="Social Media Trend Information"
+              variant="outlined"
+              value={customUserInfo}
+              onChange={(e) => setCustomUserInfo(e.target.value)}
+            />
             <br />
             <Button onClick={handleSubmit} variant="contained" color="primary">
               Submit
