@@ -48,7 +48,7 @@ export async function getCombinedOutfitTextWithSearchResultsApiRequest(
   var pattern = /\d+\./;
 
 
-  if (pattern.test(outfitOverview)) {
+  if (pattern.test(JSON.stringify(outfitOverview))) {
     clothingItems = await getOverviewTextFlipkartResults(
       `{'userInfo':"${userInfo}",'outfitOverview':"${outfitOverview}"}`
     );
