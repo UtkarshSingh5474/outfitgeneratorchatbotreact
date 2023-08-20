@@ -53,6 +53,8 @@ function UserInfo(props) {
 
     if(customUserInfo !== ""){
       props.updateUserInfo(JSON.stringify(customUserInfo));
+      closePopup();
+
     }else{
       const newUserInfo = {
         Age: age,
