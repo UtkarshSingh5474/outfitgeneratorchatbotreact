@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { TextField, Button } from "@mui/material";
 import RadioButtons from "./RadioButtons";
+import "./blur.css";
 
 // Define CSS constants
 const popupContainerStyle = {
   textAlign: "center",
-  backgroundColor: "rgba(39, 145, 216, 0.710)",
+  // backgroundColor: "rgba(39, 145, 216, 0.710)",
   width: "50%",
   position: "absolute",
   top: "10vh",
   zIndex: 1000000,
+
 };
 
 const popupStyle = {
@@ -21,6 +23,7 @@ const popupStyle = {
   zIndex: 100,
   backgroundColor: "#C0C0C0",
   borderRadius: "15px",
+
 };
 
 const popupHeaderStyle = {
@@ -47,7 +50,7 @@ function PastOrders(props) {
     <div>
       <div>
         <div style={popupContainerStyle} className="popup">
-          <div style={popupStyle} className="popup">
+          <div style={popupStyle} className="popup blurEffect">
             <div style={popupHeaderStyle} className="popup-header">
               <h1>Past Orders</h1>
               <h1 onClick={closePopup} style={{ cursor: "pointer" }}>
@@ -64,8 +67,8 @@ function PastOrders(props) {
               value={custompastorderinformation}
               onChange={(e) => setCustomPastOrderInformation(e.target.value)}
             />
-            <br />
-            <br />
+            
+
             <Button onClick={handleSubmit} variant="contained" color="primary">
               Submit
             </Button>
