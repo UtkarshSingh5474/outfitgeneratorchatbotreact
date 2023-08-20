@@ -1,4 +1,3 @@
-import { Button } from "@mui/material";
 import React from "react";
 import "./CardListStep.css";
 
@@ -37,24 +36,24 @@ class CardListStep extends React.Component {
                   )}
                   <h3 className="headingStyle">{item.name}</h3>
                   <p className="priceStyle">₹{item.current_price}</p>
-                  <Button
+                  <a
                     className="linkStyle"
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     View Product
-                  </Button>
+                  </a>
                 </div>
               ))}
-              <Button
+              <a
                 href={apiData[category].searchLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="viewSimilarStyle"
               >
                 View Similar
-              </Button>
+              </a>
             </div>
           </div>
         ))}

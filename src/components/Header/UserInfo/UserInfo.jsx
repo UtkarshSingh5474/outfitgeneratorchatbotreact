@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./blurEffect.css";
+import "../blurEffect.css";
   
 import {
   TextField,

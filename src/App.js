@@ -3,10 +3,9 @@ import "./App.css";
 import ChatBot from "react-simple-chatbot";
 import CardListStep from "./components/CardListStep/CardListStep";
 import {
-  getCombinedOutfitTextWithSearchResultsApiRequest,
-  testFunction,
-} from "./api";
-import Header from "./components/Header";
+  getCombinedOutfitTextWithSearchResultsApiRequest
+} from "./libs/api";
+import Header from "./components/Header/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { toast } from "react-toastify";
 import { ToastContainer } from "react-toastify";
@@ -223,18 +222,6 @@ class Chatbot extends React.Component {
   }
 }
 
-class RoundedBox extends React.Component {
-  render() {
-    return (
-      <div className="rounded-box">
-        <div className="box-content">
-          <p>Fashion Outfit Generator</p>
-        </div>
-      </div>
-    );
-  }
-}
-
 // Component for displaying API response
 class ApiResponseStep extends React.Component {
   state = {
@@ -255,7 +242,7 @@ class ApiResponseStep extends React.Component {
     // API request to get outfit information
     console.log("messages", messages);
 
-    testFunction(messages, userInfo)
+    getCombinedOutfitTextWithSearchResultsApiRequest(messages, userInfo)
       .then((response) => {
         console.log("response:", response);
         // Format API response

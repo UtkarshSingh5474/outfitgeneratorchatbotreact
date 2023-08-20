@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import ImageAvatars from "./Avatar";
-import PastOrders from "./PastOrders";
-import SocialMediaTrends from "./SocialMediaTrends";
-import UserInfo from "./UserInfo";
+import ImageAvatars from "../Avatar/Avatar";
+import PastOrders from "./PastOrder/PastOrders";
+import SocialMediaTrends from "./SocialMediaTrends/SocialMediaTrends";
+import UserInfo from "./UserInfo/UserInfo";
 
 function Header(props) {
   const [choice, setChoice] = useState(null);

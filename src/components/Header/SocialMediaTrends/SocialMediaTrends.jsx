@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { TextField, Button } from "@mui/material";
-import RadioButtons from "./RadioButtons";
-import "./blurEffect.css";
+import "../blurEffect.css";
 
 // Define CSS constants
 const popupContainerStyle = {
@@ -21,7 +20,6 @@ const popupStyle = {
   top: "50%",
   left: "25%",
   zIndex: 100,
-  backgroundColor: "#C0C0C0",
   borderRadius: "15px",
 };
 
