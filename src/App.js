@@ -14,8 +14,8 @@ import "react-toastify/dist/ReactToastify.css"
 
 // Define initial system behavior and user information
 var chatbotBehaviour =
-  "As a Fashion Outfit Generator Chatbot, Generate a outfit according to the user message. Specify all the clothing item seperatly by number in detail Specify color and other properties. Consider and remember the userInfo, userPastOrders, socialMediaTrendInfo.";
-var userInfo = "Age:26, Sex:Male, BodyType:Fit, City:Ghaziabad";
+  "Your name is: StyleGenie - As a Fashion Outfit Generator Chatbot, Generate a outfit according to the user message. Specify all the clothing item seperatly by number in detail Specify color and other properties. Consider and remember the userInfo, userPastOrders, socialMediaTrendInfo.";
+var userInfo = "Age:26, Sex:Female, BodyType:Fit, City:Delhi";
 var userPastOrders = "";
 var socialMediaTrendInfo = `Latest Indian Fashion Trends:
 - Vibrant colors
@@ -141,7 +141,7 @@ class Chatbot extends React.Component {
     const steps = [
       {
         id: "1",
-        message: "Hi there! How can I assist you today?",
+        message: "Hello, I am StyleGenie – your virtual fashion companion, here to redefine your shopping experience through personalized outfit recommendations and engaging conversations.\nHow may i assist you today?",
         trigger: "userInput",
       },
       {
@@ -181,15 +181,11 @@ class Chatbot extends React.Component {
             // Chatbot configuration
             submitButtonStyle={{ backgroundColor: "#FADB22" }}
             botAvatar="https://www.citypng.com/public/uploads/preview/hd-flipkart-round-logo-icon-transparent-png-11664325137typezbr9k9.png"
-            headerTitle="Fashion Outfit Generator Chatbot"
+            headerTitle="StyleGenie - Fashion Outfit Generator Chatbot"
             className="chatbot"
             hideHeader={false}
             customStyle={{
               // Apply custom styles for the chatbot container
-              height: "80vh", // Increase the height for desktop
-              width: "fit-content", // Set width to fit inner content
-              margin: "0 auto", // Center horizontally
-              marginBottom: "40px",
               background: "transparent", // Completely transparent background
               boxShadow: "none", // No box shadow
               border: "none", // No border
@@ -208,7 +204,7 @@ class Chatbot extends React.Component {
               fontStyle: "italic",
             }}
           >
-            Due to trial credits of OpenAI API, the response is slow.
+            {/* Due to trial credits of OpenAI API, the response is slow. */}
           </p>
         </div>
       </div>
@@ -246,7 +242,7 @@ class ApiResponseStep extends React.Component {
     // Display logs for debugging
 
     // API request to get outfit information
-    getCombinedOutfitTextWithSearchResultsApiRequest(messages, userInfo)
+  getCombinedOutfitTextWithSearchResultsApiRequest(messages, userInfo)
       .then((response) => {
         console.log("response:", response);
         // Format API response
