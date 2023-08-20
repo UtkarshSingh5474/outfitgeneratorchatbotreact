@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function ImageAvatars(props) {
-  const [selectedAvatar, setSelectedAvatar] = useState("Male");
+  const [selectedAvatar, setSelectedAvatar] = useState("Female");
 
   const handleAvatarClick = (avatarType) => {
     var newUserInfo = {};

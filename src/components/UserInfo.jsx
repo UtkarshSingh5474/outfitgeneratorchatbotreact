@@ -42,7 +42,7 @@ const popupHeaderStyle = {
 function UserInfo(props) {
   const [age, setAge] = useState("");
   const [city, setCity] = useState("");
-  const [sex, setSex] = useState("Male"); // Update the default gender as needed
+  const [sex, setSex] = useState("Female"); // Update the default gender as needed
   const [customUserInfo, setCustomUserInfo] = useState("");
   const [bodytype, setBodyType] = useState("");
 
