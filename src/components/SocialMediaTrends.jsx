@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { TextField,Button } from "@mui/material";
+import { TextField, Button } from "@mui/material";
 import RadioButtons from "./RadioButtons";
 import "./blurEffect.css";
 
@@ -32,13 +32,22 @@ const popupHeaderStyle = {
   borderBottom: "2px solid black",
 };
 
-
-
 function SocialMediaTrends(props) {
-
-  const [newSocialMediaTrendInfo, setSocialMediaTrendInfo] = useState(
-    ""
-  );
+  const [newSocialMediaTrendInfo, setSocialMediaTrendInfo] = useState(`Latest Indian Fashion Trends:
+  - Vibrant colors
+  - Intricate embroidery
+  - Modern designs
+  - Bold and bright shades
+  - Festive hues
+  - Lehenga trends
+  - Sustainable fashion
+  - Floral prints
+  - Bold hues
+  - Statement sleeves
+  - Fusion fashion
+  - Ruffled sarees
+  - Adding tiers or layers to lehengas and floor-length anarkali gowns.
+`);
 
   const handleSubmit = () => {
     props.updateSocialMediaTrendInfo(JSON.stringify(newSocialMediaTrendInfo));
@@ -62,25 +71,30 @@ function SocialMediaTrends(props) {
             </div>
             <br />
             <br />
-            
-            <div className="flex">
 
-            <TextField
-              multiline
-              rows={12}
-              style={{ width: "80%", height: "80%", minHeight: "80%" }}
-              id="outlined-basic"
-              label="Social Media Trend Information"
-              variant="outlined"
-              value={newSocialMediaTrendInfo}
-              onChange={(e) => setSocialMediaTrendInfo(e.target.value)}
-            />
-            <br />
-            <br />
-            <Button onClick={handleSubmit} variant="contained" color="primary">
-              Submit
-            </Button>
-              </div>
+            <div className="flex">
+              <TextField
+                multiline
+                rows={12}
+                style={{ width: "80%", height: "80%", minHeight: "80%" }}
+                id="outlined-basic"
+                label="Social Media Trend Information"
+                variant="outlined"
+                value={newSocialMediaTrendInfo}
+                onChange={(e) => setSocialMediaTrendInfo(e.target.value)}
+              >dasasdas
+              </TextField>
+
+              <br />
+              <br />
+              <Button
+                onClick={handleSubmit}
+                variant="contained"
+                color="primary"
+              >
+                Submit
+              </Button>
+            </div>
           </div>
         </div>
       </div>

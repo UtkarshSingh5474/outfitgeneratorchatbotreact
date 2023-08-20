@@ -15,9 +15,23 @@ import "react-toastify/dist/ReactToastify.css"
 // Define initial system behavior and user information
 var chatbotBehaviour =
   "As a Fashion Outfit Generator Chatbot, Generate a outfit according to the user message. Specify all the clothing item seperatly by number in detail Specify color and other properties. Consider and remember the userInfo, userPastOrders, socialMediaTrendInfo.";
-var userInfo = "Name:Rishabh ,Age:26, Sex:Male, BodyType:Fit, City:Ghaziabad";
+var userInfo = "Age:26, Sex:Male, BodyType:Fit, City:Ghaziabad";
 var userPastOrders = "";
-var socialMediaTrendInfo = "";
+var socialMediaTrendInfo = `Latest Indian Fashion Trends:
+- Vibrant colors
+- Intricate embroidery
+- Modern designs
+- Bold and bright shades
+- Festive hues
+- Lehenga trends
+- Sustainable fashion
+- Floral prints
+- Bold hues
+- Statement sleeves
+- Fusion fashion
+- Ruffled sarees
+- Adding tiers or layers to lehengas and floor-length anarkali gowns.
+`;
 
 // Define the initial system message based on your variables
 var initialSystemMessage = {

@@ -32,7 +32,7 @@ function Header(props) {
             backgroundColor: "#498FFF",
             borderRadius: "100px",
             width: "38%",
-            paddingLeft:"10px",
+            paddingLeft: "10px",
             boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.3)",
           }}
         >
@@ -41,7 +41,7 @@ function Header(props) {
             <div className="d-flex align-items-center w-100 justify-content-center">
               {" "}
               {/* Added justify-content-center */}
-              <ImageAvatars />
+              <ImageAvatars updateUserInfo={props.updateUserInfo} />
               <div
                 className="line"
                 style={{
@@ -99,7 +99,12 @@ function Header(props) {
             change={setChange}
           />
         ) : null}
-        {choice === 3 ? <SocialMediaTrends updateSocialMediaTrendInfo={props.updateSocialMediaTrendInfo} change={setChange} /> : null}
+        {choice === 3 ? (
+          <SocialMediaTrends
+            updateSocialMediaTrendInfo={props.updateSocialMediaTrendInfo}
+            change={setChange}
+          />
+        ) : null}
       </Container>
     </>
   );

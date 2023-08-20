@@ -42,8 +42,9 @@ const popupHeaderStyle = {
 function UserInfo(props) {
   const [age, setAge] = useState("");
   const [city, setCity] = useState("");
-  const [sex, setSex] = useState("female"); // Update the default gender as needed
+  const [sex, setSex] = useState("Male"); // Update the default gender as needed
   const [customUserInfo, setCustomUserInfo] = useState("");
+  const [bodytype, setBodyType] = useState("");
 
   const closePopup = () => {
     props.change(null);
@@ -53,20 +54,25 @@ function UserInfo(props) {
 
     if(customUserInfo !== ""){
       props.updateUserInfo(JSON.stringify(customUserInfo));
-      closePopup();
+      setCustomUserInfo(customUserInfo);
+      setAge("");
+      setCity("");
+      setBodyType("");
 
+      closePopup();
+      
     }else{
       const newUserInfo = {
         Age: age,
         City: city,
+        BodyType: bodytype,
         Sex: sex,
       };
-  
-  
       props.updateUserInfo(JSON.stringify(newUserInfo));
-      setAge("");
-      setCity("");
-      setCustomUserInfo("");
+      setAge(age);
+      setCity(city);
+      setBodyType(sex);
+      setCustomUserInfo("")
       closePopup();
     };
 
@@ -98,6 +104,15 @@ function UserInfo(props) {
               variant="outlined"
               value={age}
               onChange={(e) => setAge(e.target.value)}
+            />
+            <br />
+            <br />
+            <TextField
+              id="outlined-basic"
+              label="Body Type"
+              variant="outlined"
+              value={bodytype}
+              onChange={(e) => setBodyType(e.target.value)}
             />
             <br />
             <br />
