@@ -62,6 +62,9 @@ function SocialMediaTrends(props) {
             </div>
             <br />
             <br />
+            
+            <div className="flex">
+
             <TextField
               style={{ width: "80%", height: "80%", minHeight: "80%" }}
               id="outlined-basic"
@@ -75,6 +78,7 @@ function SocialMediaTrends(props) {
             <Button onClick={handleSubmit} variant="contained" color="primary">
               Submit
             </Button>
+              </div>
           </div>
         </div>
       </div>

@@ -57,6 +57,8 @@ function PastOrders(props) {
             </div>
             <br />
             <br />
+
+            <div className="flex">
             <TextField
               style={{ width: "80%", height: "80%", minHeight: "80%" }}
               id="outlined-basic"
@@ -64,11 +66,14 @@ function PastOrders(props) {
               variant="outlined"
               value={custompastorderinformation}
               onChange={(e) => setCustomPastOrderInformation(e.target.value)}
-            />
+              />
             <br />
+            <br />
+            
             <Button onClick={handleSubmit} variant="contained" color="primary">
               Submit
             </Button>
+              </div>
           </div>
         </div>
       </div>
