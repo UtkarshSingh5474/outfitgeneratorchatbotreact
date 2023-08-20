@@ -10,7 +10,7 @@ import Header from "./components/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { toast } from "react-toastify";
 import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"
+import "react-toastify/dist/ReactToastify.css";
 
 var chatbotKey = 0; // Key to trigger re-render
 
@@ -54,9 +54,10 @@ class Chatbot extends React.Component {
 
   // Callback function to update user information
   updateUserInfoCallback = (newUserInfo) => {
-    
-    this.setState({ userInfo: newUserInfo, chatbotKey: this.state.chatbotKey + 1, // Trigger re-render
-  });
+    this.setState({
+      userInfo: newUserInfo,
+      chatbotKey: this.state.chatbotKey + 1, // Trigger re-render
+    });
     userInfo = newUserInfo;
     // Update the initial system message
     initialSystemMessage = {
@@ -80,12 +81,14 @@ class Chatbot extends React.Component {
         theme: "light",
       }
     );
-
   };
-  
-   // Callback function to update social media trends information
-   updateSocialMediaTrendInfoCallback = (newSocialMediaTrendInfo) => {
-    this.setState({ socialMediaTrendInfo: newSocialMediaTrendInfo,chatbotKey: this.state.chatbotKey + 1, });
+
+  // Callback function to update social media trends information
+  updateSocialMediaTrendInfoCallback = (newSocialMediaTrendInfo) => {
+    this.setState({
+      socialMediaTrendInfo: newSocialMediaTrendInfo,
+      chatbotKey: this.state.chatbotKey + 1,
+    });
     socialMediaTrendInfo = newSocialMediaTrendInfo;
     // Update the initial system message
     initialSystemMessage = {
@@ -113,7 +116,10 @@ class Chatbot extends React.Component {
   };
   // Callback function to update user past orders
   updateUserPastOrders = (customPastOrderInformation) => {
-    this.setState({ userPastOrders: customPastOrderInformation,chatbotKey: this.state.chatbotKey + 1, });
+    this.setState({
+      userPastOrders: customPastOrderInformation,
+      chatbotKey: this.state.chatbotKey + 1,
+    });
     userPastOrders = customPastOrderInformation;
     // Update the initial system message
     initialSystemMessage = {
@@ -144,14 +150,14 @@ class Chatbot extends React.Component {
     const steps = [
       {
         id: "1",
-        message: "Hello, I am StyleGenie – your virtual fashion companion, here to redefine your shopping experience through personalized outfit recommendations and engaging conversations.\nHow may i assist you today?",
+        message:
+          "Hello, I am StyleGenie – your virtual fashion companion, here to redefine your shopping experience through personalized outfit recommendations and engaging conversations.\nHow may i assist you today?",
         trigger: "userInput",
       },
       {
         id: "userInput",
         user: true,
         trigger: "getResponse",
-        
       },
       {
         id: "getResponse",
@@ -167,7 +173,6 @@ class Chatbot extends React.Component {
         trigger: "userInput",
       },
     ];
-    
 
     // Render the Chatbot component
     return (
@@ -248,9 +253,9 @@ class ApiResponseStep extends React.Component {
     // Display logs for debugging
 
     // API request to get outfit information
-    console.log("messages",messages)
+    console.log("messages", messages);
 
-  getCombinedOutfitTextWithSearchResultsApiRequest(messages, userInfo)
+    getCombinedOutfitTextWithSearchResultsApiRequest(messages, userInfo)
       .then((response) => {
         console.log("response:", response);
         // Format API response
