@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { TextField, Button } from "@mui/material";
 import RadioButtons from "./RadioButtons";
+import "./blurEffect.css";
 
 // Define CSS constants
 const popupContainerStyle = {
@@ -47,7 +48,7 @@ function PastOrders(props) {
     <div>
       <div>
         <div style={popupContainerStyle} className="popup">
-          <div style={popupStyle} className="popup">
+          <div style={popupStyle} className="popup blurEffect">
             <div style={popupHeaderStyle} className="popup-header">
               <h1>Past Orders</h1>
               <h1 onClick={closePopup} style={{ cursor: "pointer" }}>

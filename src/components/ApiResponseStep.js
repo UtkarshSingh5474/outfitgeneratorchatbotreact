@@ -15,18 +15,13 @@ class ApiResponseStep extends React.Component {
         role: 'user',
         content: previousStep.value,
       }
-
-      console.log("messages:",messages);
-      console.log("userInput:",userInput);
       await addMessageToHistory(userInput.role, userInput.content);
-      console.log("messagesApiResponseStep:",messages);
 
 
       // Get the combined outfit with search results text from the API
       getCombinedOutfitTextWithSearchResultsApiRequest(messages,userInfo)
         .then((response) => {
 
-          console.log("response:",response);
           const outfitOverview = response.outfitOverview;
           let formattedMessage = outfitOverview.replace(/\n/g, '<br />');
           formattedMessage = formattedMessage.replace(

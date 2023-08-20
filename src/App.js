@@ -10,7 +10,7 @@ import Header from "./components/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { toast } from "react-toastify";
 import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import "react-toastify/dist/ReactToastify.css"
 
 // Define initial system behavior and user information
 var chatbotBehaviour =
@@ -32,6 +32,7 @@ class Chatbot extends React.Component {
   state = {
     userInfo: userInfo,
     userPastOrders: userPastOrders,
+    socialMediaTrendInfo: socialMediaTrendInfo,
   };
 
   // Callback function to update user information
@@ -44,6 +45,8 @@ class Chatbot extends React.Component {
       content: `${chatbotBehaviour},userInfo:${userInfo},userPastOrders:${userPastOrders},socialMediaTrendInfo:${socialMediaTrendInfo}`,
     };
     messages = [initialSystemMessage]; // Reset chat history
+    console.log("messages",messages)
+
     // Display success toast
     toast.success(
       "User Information Updated Successfully!\nChat History is resetted",
@@ -60,7 +63,36 @@ class Chatbot extends React.Component {
       }
     );
   };
+  
+   // Callback function to update social media trends information
+   updateSocialMediaTrendInfoCallback = (newSocialMediaTrendInfo) => {
+    this.setState({ socialMediaTrendInfo: newSocialMediaTrendInfo });
+    socialMediaTrendInfo = newSocialMediaTrendInfo;
+    // Update the initial system message
+    initialSystemMessage = {
+      role: "system",
+      content: `${chatbotBehaviour},userInfo:${userInfo},userPastOrders:${userPastOrders},socialMediaTrendInfo:${socialMediaTrendInfo}`,
+    };
 
+    messages = [initialSystemMessage]; // Reset chat history
+    console.log("messages",messages)
+
+    // Display success toast
+    toast.success(
+      "Social Media Trend Information Updated Successfully!\nChat History is resetted",
+      {
+        // Toast configuration
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      }
+    );
+  };
   // Callback function to update user past orders
   updateUserPastOrders = (customPastOrderInformation) => {
     this.setState({ userPastOrders: customPastOrderInformation });
@@ -71,6 +103,8 @@ class Chatbot extends React.Component {
       content: `${chatbotBehaviour},userInfo:${userInfo},userPastOrders:${userPastOrders},socialMediaTrendInfo:${socialMediaTrendInfo}`,
     };
     messages = [initialSystemMessage]; // Reset chat history
+    console.log("messages",messages)
+
     // Display success toast
     toast.success(
       "Past Order Updated Successfully!\nChat History is resetted",
@@ -126,6 +160,7 @@ class Chatbot extends React.Component {
           userPastOrders={this.state.userPastOrders}
           updateUserInfo={this.updateUserInfoCallback}
           updateUserPastOrders={this.updateUserPastOrders}
+          updateSocialMediaTrendInfo={this.updateSocialMediaTrendInfoCallback}
         />
         <div className="chatbot-container">
           <ChatBot
@@ -135,7 +170,6 @@ class Chatbot extends React.Component {
             headerTitle="Fashion Outfit Generator Chatbot"
             className="chatbot"
             hideHeader={false}
-
             customStyle={{
               // Apply custom styles for the chatbot container
               height: "80vh", // Increase the height for desktop
@@ -170,15 +204,15 @@ class Chatbot extends React.Component {
 
 class RoundedBox extends React.Component {
   render() {
-  return (
-    <div className="rounded-box">
-      <div className="box-content">
-        <p>Fashion Outfit Generator</p>
+    return (
+      <div className="rounded-box">
+        <div className="box-content">
+          <p>Fashion Outfit Generator</p>
+        </div>
       </div>
-    </div>
-  );}
-};
-
+    );
+  }
+}
 
 // Component for displaying API response
 class ApiResponseStep extends React.Component {
@@ -196,8 +230,6 @@ class ApiResponseStep extends React.Component {
     // Add user input to messages array
     messages.push(userInput);
     // Display logs for debugging
-    console.log("orderSent:", userPastOrders);
-    console.log("messageSent:", messages);
 
     // API request to get outfit information
     getCombinedOutfitTextWithSearchResultsApiRequest(messages, userInfo)
@@ -221,14 +253,12 @@ class ApiResponseStep extends React.Component {
 
         this.setState({ message }, () => {
           if (message.includes("1.")) {
-            console.log("clothing not empty");
             // Trigger next step to show clothing options
             triggerNextStep({
               value: response.clothingItems,
               trigger: "showCardList",
             });
           } else {
-            console.log("clothing empty");
             // Trigger next step for user input
             triggerNextStep({
               trigger: "userInput",
@@ -259,15 +289,13 @@ class ApiResponseStep extends React.Component {
 
 export default Chatbot;
 
-
-
 // Component with background
-            // customStyle={{
-            //   // Apply custom styles for the chatbot container
-            //   width: "fit-content", // Set width to fit inner content
-            //   margin: "0 auto", // Center horizontally
-            //   marginBottom: "40px",
-            //   background: "rgba(0, 0, 0, 0)", // Transparent background
-            //   boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)", // Optional: Add a shadow for better visibility
-            //   borderRadius: "10px", // Rounded corners
-            // }}
+// customStyle={{
+//   // Apply custom styles for the chatbot container
+//   width: "fit-content", // Set width to fit inner content
+//   margin: "0 auto", // Center horizontally
+//   marginBottom: "40px",
+//   background: "rgba(0, 0, 0, 0)", // Transparent background
+//   boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)", // Optional: Add a shadow for better visibility
+//   borderRadius: "10px", // Rounded corners
+// }}

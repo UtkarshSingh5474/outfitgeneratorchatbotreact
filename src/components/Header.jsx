@@ -31,7 +31,8 @@ function Header(props) {
           style={{
             backgroundColor: "#498FFF",
             borderRadius: "100px",
-            width: "90%",
+            width: "80%",
+            paddingLeft:"10px",
             boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.3)",
           }}
         >
@@ -98,7 +99,7 @@ function Header(props) {
             change={setChange}
           />
         ) : null}
-        {choice === 3 ? <SocialMediaTrends change={setChange} /> : null}
+        {choice === 3 ? <SocialMediaTrends updateSocialMediaTrendInfo={props.updateSocialMediaTrendInfo} change={setChange} /> : null}
       </Container>
     </>
   );

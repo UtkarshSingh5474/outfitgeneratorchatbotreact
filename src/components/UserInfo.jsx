@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "./blurEffect.css";
+  
 import {
   TextField,
   Button,
@@ -67,7 +69,7 @@ function UserInfo(props) {
     <div>
       <div>
         <div style={popupContainerStyle} className="popup">
-          <div style={popupStyle} className="popup">
+          <div style={popupStyle} className="popup blurEffect">
             <div style={popupHeaderStyle} className="popup-header">
               <h1>Set User Info</h1>
               <h1 onClick={closePopup} style={{ cursor: "pointer" }}>
