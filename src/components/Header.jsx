@@ -31,7 +31,7 @@ function Header(props) {
           style={{
             backgroundColor: "#498FFF",
             borderRadius: "100px",
-            width: "80%",
+            width: "38%",
             paddingLeft:"10px",
             boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.3)",
           }}

@@ -66,7 +66,6 @@ function PastOrders(props) {
               onChange={(e) => setCustomPastOrderInformation(e.target.value)}
             />
             <br />
-            <br />
             <Button onClick={handleSubmit} variant="contained" color="primary">
               Submit
             </Button>
