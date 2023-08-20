@@ -45,10 +45,12 @@ export async function getCombinedOutfitTextWithSearchResultsApiRequest(
 ) {
   var outfitOverview = await getOverviewText(JSON.stringify(messages));
   var clothingItems = {};
+  var pattern = /\d+\./;
 
-  if (outfitOverview.includes("1.")) {
+
+  if (pattern.test(outfitOverview)) {
     clothingItems = await getOverviewTextFlipkartResults(
-      `{'userInfo':${userInfo},'outfitOverview':${outfitOverview}`
+      `{'userInfo':${userInfo},'outfitOverview':${outfitOverview}}`
     );
   }
   return { outfitOverview: outfitOverview, clothingItems: clothingItems };
