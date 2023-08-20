@@ -66,6 +66,8 @@ function SocialMediaTrends(props) {
             <div className="flex">
 
             <TextField
+              multiline
+              rows={12}
               style={{ width: "80%", height: "80%", minHeight: "80%" }}
               id="outlined-basic"
               label="Social Media Trend Information"
