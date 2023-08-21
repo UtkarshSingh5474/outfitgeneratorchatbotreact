@@ -214,7 +214,7 @@ class Chatbot extends React.Component {
               fontStyle: "italic",
             }}
           >
-            {/* Due to trial credits of OpenAI API, the response is slow. */}
+            Due to trial credits of OpenAI API and GCP the response is slow. (Estimate waiting time : 1-2mins)
           </p>
         </div>
       </div>
